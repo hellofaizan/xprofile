@@ -14,7 +14,7 @@ export default function App({ Component, pageProps }) {
       <Head>
         <meta charSet="utf-8" />
         <title>𝕏 Profile - Your Twitter Profile Card</title>
-        <link rel="icon" href="/x.jpg" />
+        <link rel="icon" href="/x_large.jpg" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <meta name="theme-color" content="#171717" />
         <meta
@@ -23,7 +23,7 @@ export default function App({ Component, pageProps }) {
         />
         <meta name="description" content="Showcase your 𝕏 profile to world" />
         <meta name="author" content="Hello Faizan" />
-        <link rel="apple-touch-icon" href="/x.jpg" />
+        <link rel="apple-touch-icon" href="/x_large.jpg" />
 
 
         <meta property="og:title" content="𝕏 Profile - Your Twitter Profile Card" />
