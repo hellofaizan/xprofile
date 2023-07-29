@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { motion } from "framer-motion"
 import Link from 'next/link'
 import useSWR from 'swr'
-import Card from './components/card'
+import Card from './components/Card'
 import { Button } from '@nextui-org/react'
 
 const Home = () => {
