@@ -1,10 +1,14 @@
 import React from 'react'
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { motion } from "framer-motion"
 import Link from 'next/link'
 import useSWR from 'swr'
+import Card from './components/card'
+import { Button } from '@nextui-org/react'
 
 const Home = () => {
+  const [xdata, setXData] = useState([])
   const fetcher = (...args) => fetch(...args).then(res => res.json())
 
   // get data from api
@@ -127,6 +131,29 @@ const Home = () => {
             </div>
           </header>
 
+          {data.length > 0 ? (
+            <div className="grid grid-cols-1 gap-4 px-4 py-8 mx-auto max-w-screen-xl sm:px-6 lg:px-8">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {data.map((user, index) => (
+                  <Card key={index} user={user} />
+                ))}
+              </div>
+            </div>
+          ) : (
+            <div className="grid h-screen px-4 place-content-center">
+              <div className="text-center">
+                <h1 className="font-black text-gray-200 text-3xl">No profiles available 😣</h1>
+                <Link
+                  href="https://github.com/hellofaizan/xprofile"
+                  className="inline-block px-5 py-3 mt-6 text-sm font-medium text-white bg-indigo-600 rounded hover:bg-indigo-700 focus:outline-none focus:ring"
+                >
+                  Submit your profile
+                </Link>
+              </div>
+            </div>
+          )}
+
+
         </motion.div>
       </>
     )
@@ -165,15 +192,15 @@ const Home = () => {
 
         {/* Loading */}
         <div className="grid h-screen px-4 place-content-center">
-            <div
-              class="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
-              role="status">
-              <span
-                class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
-              >Loading...</span
-              >
-            </div>
+          <div
+            class="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
+            role="status">
+            <span
+              class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+            >Loading...</span
+            >
           </div>
+        </div>
 
       </motion.div>
     </>
