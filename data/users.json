@@ -1,10 +1,8 @@
 [
     {
         "username": "hellofaizaan",
-        "techstack": "python, javascript, html, css, react, nodejs, express, mongodb, sql, git, github, heroku, netlify, aws, firebase, docker, kubernetes, linux, bash, c, c++, java, kotlin, flutter, dart, swift, php, mysql, postgresql, mongodb, redis, graphq"
-    },
-    {
-        "username": "amirHiroon",
-        "techstack": "python, javascript, html, css, react, nodejs, express, mongodb, sql, git, github, heroku, netlify, aws, firebase, docker, kubernetes, linux, bash, c, c++, java, kotlin, flutter, dart, swift, php, mysql, postgresql, mongodb, redis, graphq"
+        "name": "Hello Faizan",
+        "image": "https://avatars.githubusercontent.com/hellofaizan",
+        "about": "I am a full stack developer and a competitive programmer. I love to code and learn new things. I am a tech enthusiast and love to explore new technologies. I am currently working on my DSA skills and learning new things in web development."
     }
 ]
