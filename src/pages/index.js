@@ -26,7 +26,7 @@ const Home = () => {
             <div className="md:flex md:items-center md:gap-12">
               <Link className="block " href="/">
                 <span className="sr-only">Home</span>
-                <Image src="/x_large.jpg" alt="Logo" width={50} height={50} priority />
+                <Image src="/x_large.jpg" alt="Logo" width={40} height={40} priority />
               </Link>
             </div>
 
@@ -135,7 +135,7 @@ const Home = () => {
             <div className="grid grid-cols-1 gap-4 px-4 py-8 mx-auto max-w-screen-xl sm:px-6 lg:px-8">
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {data.map((user, index) => (
-                  <Card key={index} user={user} />
+                  <Card key={index} user={user} name={user.name}/>
                 ))}
               </div>
             </div>
@@ -172,7 +172,7 @@ const Home = () => {
               <div className="md:flex md:items-center md:gap-12">
                 <Link className="block " href="/">
                   <span className="sr-only">Home</span>
-                  <Image src="/x_large.jpg" alt="Logo" width={50} height={50} priority />
+                  <Image src="/x_large.jpg" alt="Logo" width={40} height={40} priority />
                 </Link>
               </div>
 

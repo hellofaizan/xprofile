@@ -1,9 +1,11 @@
 import React from 'react'
 
-function Card() {
+const card = (props) => {
   return (
-    <div>C</div>
+    <div>
+      <h1>{props.name}</h1>
+    </div>
   )
 }
 
-export default Card
+export default card
