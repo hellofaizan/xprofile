@@ -76,7 +76,7 @@ const Home = () => {
                 <div className="md:flex md:items-center md:gap-12">
                   <Link className="block " href="/">
                     <span className="sr-only">Home</span>
-                    <Image src="/x_large.jpg" alt="Logo" width={50} height={50} priority />
+                    <Image src="/x_large.jpg" alt="Logo" width={40} height={40} priority />
                   </Link>
                 </div>
 
@@ -111,15 +111,15 @@ const Home = () => {
                         <input type="text" id="simple-search" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-3 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search user profile..." required></input>
                       </div>
                       <button type="submit" className="p-3 ml-2 text-sm font-medium text-white bg-gray-700 rounded-lg focus:ring-4 focus:outline-none hover:bg-gray-600 focus:ring-gray-500">
-                      <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" strokeWidth="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
-                      </svg>
-                      <span className="sr-only">Search</span>
-                    </button>
-                    <Link href={"https://github.com/hellofaizan/xprofile"} className="p-3 ml-2 text-sm font-medium text-white bg-gray-700 rounded-lg focus:ring-4 focus:outline-none hover:bg-gray-600 focus:ring-gray-500">
-                      ⭐
-                      <span className="sr-only">Contribute</span>
-                    </Link>
+                        <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" strokeWidth="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                        </svg>
+                        <span className="sr-only">Search</span>
+                      </button>
+                      <Link href={"https://github.com/hellofaizan/xprofile"} className="p-3 ml-2 text-sm font-medium text-white bg-gray-700 rounded-lg focus:ring-4 focus:outline-none hover:bg-gray-600 focus:ring-gray-500">
+                        ⭐
+                        <span className="sr-only">Contribute</span>
+                      </Link>
                     </form>
                   </div>
                 </div>
@@ -162,6 +162,18 @@ const Home = () => {
             </div>
           </div>
         </header>
+
+        {/* Loading */}
+        <div className="grid h-screen px-4 place-content-center">
+            <div
+              class="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
+              role="status">
+              <span
+                class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+              >Loading...</span
+              >
+            </div>
+          </div>
 
       </motion.div>
     </>
