@@ -3,7 +3,7 @@
 A website to list your Twitter ( 𝕏 ) and Github profile to the world
 
 
-![image](https://github.com/hellofaizan/xprofile/assets/84437051/1e8cbe14-c739-4991-be79-f6d93f438234)
+![image](https://github.com/hellofaizan/xprofile/assets/84437051/009c11f6-56e5-415a-89b0-a53f362c43f1)
 
 
 ## Languages/Tools
