@@ -34,7 +34,7 @@ const card = (props) => {
             <p className='mx-4 md:mx-5 text-base'>{aboutWithoutLink} <Link href={aboutLink} target="_blank" rel="noopener noreferrer" className='text-blue-400 hover:text-blue-500 cursor-pointer'>{aboutLink}</Link></p>
 
             {/* Follow on github and on twitter button 2 in column */}
-            <div className='flex flex-col gap-2 text-center md:flex-row justify-between mt-2 mb-3 mx-4 md:mx-5'>
+            <div className='flex flex-col gap-2 text-center md:flex-row justify-between mt-2 mb-4 mx-4 md:mx-5'>
               <Link href={"https://github.com/" + props.github} target="_blank" rel="noopener noreferrer" className='px-4 py-2 text-sm font-medium text-white bg-gray-700 rounded hover:bg-gray-600 focus:outline-none focus:ring'>Follow on Github <i className='bi bi-github'></i></Link>
               <Link href={"https://twitter.com/" + props.username} target="_blank" rel="noopener noreferrer" className='px-4 py-2 text-sm font-medium text-white bg-gray-700 rounded hover:bg-gray-600 focus:outline-none focus:ring'>Follow on 𝕏 <i className='bi bi-twitter'></i></Link>
             </div>
