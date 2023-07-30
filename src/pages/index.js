@@ -163,7 +163,7 @@ const Home = () => {
             </div>
           )}
 
-          <div className='banner fixed inset-x-0 bottom-0'>
+          <div className='banner hidden md:block fixed inset-x-0 bottom-0'>
             <div className="flex items-center justify-between gap-4 bg-white/5 px-4 py-3 text-white" >
               <p className="text-sm font-medium">
                 Developed with <i className="bi bi-heart-fill text-red-500"></i> by <Link href="https://hellofaizan.me" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-500 cursor-pointer">@hellofaizan</Link> ( Open Source )
