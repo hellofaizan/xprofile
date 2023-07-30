@@ -94,13 +94,13 @@ const Home = () => {
 
                 <div className="hidden sm:block">
                   <form className="flex items-center w-80">
-                    <label for="simple-search" className="sr-only">Search</label>
+                    <label htmlFor="simple-search" className="sr-only">Search</label>
                     <div className="relative w-full">
                       <input type="text" id="simple-search" className="border border-gray text-sm rounded-lg block w-full pl-3 p-2.5  bg-[#0e0e0e] border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500" placeholder="Search user profile..." required></input>
                     </div>
-                    <button type="submit" className="p-3 ml-2 text-sm font-medium text-white bg-[#0e0e0e] border border-gray-600 rounded-lg focus:ring-2 focus:outline-none hover:bg-gray-900">
+                    <button type="submit" className="p-3 ml-2 text-sm font-medium text-white bg-[#0e0e0e] border border-gray-600 rounded-lg focus:ring-2 focus:outline-none hover:bg-gray-600">
                       <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" strokeWidth="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                       </svg>
                       <span className="sr-only">Search</span>
                     </button>
@@ -118,13 +118,13 @@ const Home = () => {
                   </div>
                   <div className="block sm:hidden">
                     <form className="flex items-center">
-                      <label for="simple-search" className="sr-only">Search</label>
+                      <label htmlFor="simple-search" className="sr-only">Search</label>
                       <div className="relative w-full">
                         <input type="text" id="simple-search" className=" border text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-3 p-2.5  bg-[#0e0e0e] border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search user profile..." required></input>
                       </div>
                       <button type="submit" className="p-3 ml-2 text-sm font-medium text-white bg-[#0e0e0e] rounded-lg focus:ring-2 focus:outline-none border border-gray-600 hover:bg-gray-900 focus:ring-gray-700">
                         <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" strokeWidth="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                          <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                         </svg>
                         <span className="sr-only">Search</span>
                       </button>
@@ -140,12 +140,21 @@ const Home = () => {
           </header>
 
           {data.length > 0 ? (
-            <div className="grid grid-cols-1 gap-4 px-4 py-8 mx-auto max-w-screen-xl sm:px-6 lg:px-8">
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {data.map((user, index) => (
-                  <Card key={index} user={user} followers={user.followers} age={user.age} bannerColor={user.banner_color} name={user.name} username={user.username} github={user.github} about={user.about}/>
-                ))}
+            <div className='flex flex-col'>
+              <div className="grid grid-cols-1 gap-4 px-4 py-8 mx-auto max-w-screen-xl sm:px-6 lg:px-8">
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                  {data.map((user, index) => (
+                    <Card key={index} user={user} bannerColor={user.banner_color} name={user.name} username={user.username} github={user.github} about={user.about} />
+                  ))}
+                  
+                </div>
               </div>
+              {/* Reached end of the list show a text*/}
+              <div className="col-span-1 mb-5">
+                    <div className="flex items-center justify-center h-full">
+                      <p className="text-gray-400">No more profiles found :)</p>
+                    </div>
+                  </div>
             </div>
           ) : (
             <div className="grid h-screen px-4 place-content-center">
@@ -201,10 +210,10 @@ const Home = () => {
         {/* Loading */}
         <div className="grid h-screen px-4 place-content-center">
           <div
-            class="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
+            className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
             role="status">
             <span
-              class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+              className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
             >Loading...</span
             >
           </div>

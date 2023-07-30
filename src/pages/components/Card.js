@@ -6,7 +6,7 @@ const card = (props) => {
   return (
     <>
       {/* design a card using tailwind css good ui */}
-      <div className="w-full p-2">
+      <div className="w-full overflow-hidden border border-gray-700 hover:border-gray-600 hover:scale-[1.006] rounded-xl">
         <div className="bg-[#080808] rounded-lg shadow-lg">
           <div className="p-4">
             <h2 className="text-2xl font-bold">{props.name}</h2>
@@ -18,6 +18,7 @@ const card = (props) => {
             <Image
               src={"https://avatars.githubusercontent.com/"+props.github}
               alt={props.name}
+              priority={true}
               width={100}
               height={100}
               className="w-full h-48 object-cover"
