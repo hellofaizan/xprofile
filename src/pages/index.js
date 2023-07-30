@@ -5,14 +5,22 @@ import { motion } from "framer-motion"
 import Link from 'next/link'
 import useSWR from 'swr'
 import Card from './components/Card'
-import { Button } from '@nextui-org/react'
 
 const Home = () => {
-  const [xdata, setXData] = useState([])
   const fetcher = (...args) => fetch(...args).then(res => res.json())
 
+  // //get repo count from github api
+  // const [repoCount, setRepoCount] = useState(0)
+  // useEffect(() => {
+  //   fetch('https://api.github.com/users/hellofaizan')
+  //     .then(res => res.json())
+  //     .then(data => {
+  //       setRepoCount(data.public_repos)
+  //     })
+  // }, [])
+
   // get data from api
-  const { data, error, isLoading } = useSWR('/api/users', fetcher)
+  const { data, error } = useSWR('/api/users', fetcher)
 
   if (error) return <>
     <motion.div
@@ -88,9 +96,9 @@ const Home = () => {
                   <form className="flex items-center w-80">
                     <label for="simple-search" className="sr-only">Search</label>
                     <div className="relative w-full">
-                      <input type="text" id="simple-search" className="border border-gray text-sm rounded-lg block w-full pl-3 p-2.5  bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500" placeholder="Search user profile..." required></input>
+                      <input type="text" id="simple-search" className="border border-gray text-sm rounded-lg block w-full pl-3 p-2.5  bg-[#0e0e0e] border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500" placeholder="Search user profile..." required></input>
                     </div>
-                    <button type="submit" className="p-3 ml-2 text-sm font-medium text-white bg-gray-700 rounded-lg focus:ring-4 focus:outline-none hover:bg-gray-600 focus:ring-gray-500">
+                    <button type="submit" className="p-3 ml-2 text-sm font-medium text-white bg-[#0e0e0e] border border-gray-600 rounded-lg focus:ring-2 focus:outline-none hover:bg-gray-900">
                       <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" strokeWidth="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                       </svg>
@@ -102,7 +110,7 @@ const Home = () => {
                 <div className="flex items-center gap-4">
                   <div className="sm:flex hidden sm:gap-4">
                     <Link
-                      className="rounded-md bg-gray-700 px-5 py-2.5 text-sm font-medium hover:bg-gray-600 text-white shadow"
+                      className="rounded-md bg-[#0e0e0e] border border-gray-600 px-5 py-2.5 text-sm font-medium hover:bg-gray-600 text-white shadow"
                       href="https://github.com/hellofaizan/xprofile" target="_blank" rel="noopener noreferrer" title='Add your 𝕏 (Twitter) Profile to this list :)'
                     >
                       Contribute ⭐
@@ -112,15 +120,15 @@ const Home = () => {
                     <form className="flex items-center">
                       <label for="simple-search" className="sr-only">Search</label>
                       <div className="relative w-full">
-                        <input type="text" id="simple-search" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-3 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search user profile..." required></input>
+                        <input type="text" id="simple-search" className=" border text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-3 p-2.5  bg-[#0e0e0e] border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search user profile..." required></input>
                       </div>
-                      <button type="submit" className="p-3 ml-2 text-sm font-medium text-white bg-gray-700 rounded-lg focus:ring-4 focus:outline-none hover:bg-gray-600 focus:ring-gray-500">
+                      <button type="submit" className="p-3 ml-2 text-sm font-medium text-white bg-[#0e0e0e] rounded-lg focus:ring-2 focus:outline-none border border-gray-600 hover:bg-gray-900 focus:ring-gray-700">
                         <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" strokeWidth="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                         </svg>
                         <span className="sr-only">Search</span>
                       </button>
-                      <Link href={"https://github.com/hellofaizan/xprofile"} className="p-3 ml-2 text-sm font-medium text-white bg-gray-700 rounded-lg focus:ring-4 focus:outline-none hover:bg-gray-600 focus:ring-gray-500">
+                      <Link href={"https://github.com/hellofaizan/xprofile"} className="p-3 ml-2 text-sm font-medium text-white bg-[#0e0e0e] rounded-lg focus:ring-2 focus:outline-none hover:bg-gray-900 focus:ring-gray-700 border border-gray-600">
                         ⭐
                         <span className="sr-only">Contribute</span>
                       </Link>
@@ -135,7 +143,7 @@ const Home = () => {
             <div className="grid grid-cols-1 gap-4 px-4 py-8 mx-auto max-w-screen-xl sm:px-6 lg:px-8">
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {data.map((user, index) => (
-                  <Card key={index} user={user} name={user.name}/>
+                  <Card key={index} user={user} followers={user.followers} age={user.age} bannerColor={user.banner_color} name={user.name} username={user.username} github={user.github} about={user.about}/>
                 ))}
               </div>
             </div>

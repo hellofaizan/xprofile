@@ -2,43 +2,10 @@
     {
         "username": "hellofaizaan",
         "name": "Hello Faizan",
-        "image": "https://avatars.githubusercontent.com/hellofaizan",
-        "about": "I am a full stack developer and a competitive programmer. I love to code and learn new things. I am a tech enthusiast and love to explore new technologies. I am currently working on my DSA skills and learning new things in web development."
-    },
-    {
-        "username": "hellofaizaan",
-        "name": "Hello Fhvvuyvn",
-        "image": "https://avatars.githubusercontent.com/hellofaizan",
-        "about": "I am a full stack developer and a competitive programmer. I love to code and learn new things. I am a tech enthusiast and love to explore new technologies. I am currently working on my DSA skills and learning new things in web development."
-    },
-    {
-        "username": "hellofaizaan",
-        "name": "Hello Faizan",
-        "image": "https://avatars.githubusercontent.com/hellofaizan",
-        "about": "I am a full stack developer and a competitive programmer. I love to code and learn new things. I am a tech enthusiast and love to explore new technologies. I am currently working on my DSA skills and learning new things in web development."
-    },
-    {
-        "username": "hellofaizaan",
-        "name": "Hello Faizan",
-        "image": "https://avatars.githubusercontent.com/hellofaizan",
-        "about": "I am a full stack developer and a competitive programmer. I love to code and learn new things. I am a tech enthusiast and love to explore new technologies. I am currently working on my DSA skills and learning new things in web development."
-    },
-    {
-        "username": "hellofaizaan",
-        "name": "Hello Faizan",
-        "image": "https://avatars.githubusercontent.com/hellofaizan",
-        "about": "I am a full stack developer and a competitive programmer. I love to code and learn new things. I am a tech enthusiast and love to explore new technologies. I am currently working on my DSA skills and learning new things in web development."
-    },
-    {
-        "username": "hellofaizaan",
-        "name": "Hello Faizan",
-        "image": "https://avatars.githubusercontent.com/hellofaizan",
-        "about": "I am a full stack developer and a competitive programmer. I love to code and learn new things. I am a tech enthusiast and love to explore new technologies. I am currently working on my DSA skills and learning new things in web development."
-    },
-    {
-        "username": "hellofaizaan",
-        "name": "Hello Faizan",
-        "image": "https://avatars.githubusercontent.com/hellofaizan",
-        "about": "I am a full stack developer and a competitive programmer. I love to code and learn new things. I am a tech enthusiast and love to explore new technologies. I am currently working on my DSA skills and learning new things in web development."
+        "github": "hellofaizan",
+        "banner_color": "#fff",
+        "followers": 26,
+        "age": 18,
+        "about": "I am a full stack developer and a competitive programmer."
     }
 ]
