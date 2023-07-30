@@ -28,7 +28,7 @@ const Home = () => {
             <div className="md:flex md:items-center md:gap-12">
               <Link className="block " href="/">
                 <span className="sr-only">Home</span>
-                <Image src="/x_large.jpg" alt="Logo" width={40} height={40} priority />
+                <Image src="/x_large.png" alt="Logo" width={40} height={40} priority />
               </Link>
             </div>
 
@@ -82,7 +82,7 @@ const Home = () => {
                 <div className="md:flex md:items-center md:gap-12">
                   <Link className="block " href="/">
                     <span className="sr-only">Home</span>
-                    <Image src="/x_large.jpg" alt="Logo" width={40} height={40} priority />
+                    <Image src="/x_large.png" alt="Logo" width={40} height={40} priority />
                   </Link>
                 </div>
 
@@ -145,7 +145,7 @@ const Home = () => {
               {/* Reached end of the list show a text*/}
               <div className="col-span-1 mb-5">
                 <div className="flex items-center justify-center h-full">
-                  <p className="text-gray-400">No more profiles found :)</p>
+                  <p className="text-gray-400">End of the profile list :)</p>
                 </div>
               </div>
             </div>
@@ -164,25 +164,25 @@ const Home = () => {
           )}
 
           <div className='banner fixed inset-x-0 bottom-0'>
-          <div className="flex items-center justify-between gap-4 bg-white/5 px-4 py-3 text-white" >
-            <p className="text-sm font-medium">
-              Developed with <i className="bi bi-heart-fill text-red-500"></i> by <Link href="https://hellofaizan.me" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-500 cursor-pointer">@hellofaizan</Link> ( Open Source )
-            </p>
+            <div className="flex items-center justify-between gap-4 bg-white/5 px-4 py-3 text-white" >
+              <p className="text-sm font-medium">
+                Developed with <i className="bi bi-heart-fill text-red-500"></i> by <Link href="https://hellofaizan.me" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-500 cursor-pointer">@hellofaizan</Link> ( Open Source )
+              </p>
 
-            <button aria-label="Dismiss" onClick={dismiss} className="shrink-0 rounded-lg bg-black/10 p-1 transition hover:bg-white/10">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                viewBox="0 0 20 20"
-                fill="currentColor">
-                <path
-                  fill-rule="evenodd"
-                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </button>
-          </div>
+              <button aria-label="Dismiss" onClick={dismiss} className="shrink-0 rounded-lg bg-black/10 p-1 transition hover:bg-white/10">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  viewBox="0 0 20 20"
+                  fill="currentColor">
+                  <path
+                    fill-rule="evenodd"
+                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
 
 
@@ -204,7 +204,7 @@ const Home = () => {
               <div className="md:flex md:items-center md:gap-12">
                 <Link className="block " href="/">
                   <span className="sr-only">Home</span>
-                  <Image src="/x_large.jpg" alt="Logo" width={40} height={40} priority />
+                  <Image src="/x_large.png" alt="Logo" width={40} height={40} priority />
                 </Link>
               </div>
 
