@@ -10,18 +10,11 @@ const Home = () => {
   const [search, setSearch] = useState(false)
   const fetcher = (...args) => fetch(...args).then(res => res.json())
 
-  // //get repo count from github api
-  // const [repoCount, setRepoCount] = useState(0)
-  // useEffect(() => {
-  //   fetch('https://api.github.com/users/hellofaizan')
-  //     .then(res => res.json())
-  //     .then(data => {
-  //       setRepoCount(data.public_repos)
-  //     })
-  // }, [])
-
-  // get data from api
   const { data, error } = useSWR('/api/users', fetcher)
+
+  const dismiss = () => {
+    document.querySelector('.banner').classList.add('hidden')
+  }
 
   if (error) return <>
     <motion.div
@@ -83,7 +76,7 @@ const Home = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.2 }}>
 
-          <header className=""> 
+          <header className="">
             <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
               <div className="flex h-16 items-center justify-between">
                 <div className="md:flex md:items-center md:gap-12">
@@ -133,28 +126,28 @@ const Home = () => {
               <div className="grid grid-cols-1 gap-4 py-4 ">
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
                   {data
-                  .filter((user) => {
-                    if (search == "") {
-                      return user
-                    } else if (user.name.toLowerCase().includes(search.toLowerCase())) {
-                      return user
-                    }
-                  })
-                  // sort random
-                  .sort(() => Math.random() - 0.5)
-                  .map((user, index) => (
-                    <Card key={index} user={user} bannerColor={user.banner_color} name={user.name} username={user.username} github={user.github} about={user.about} />
-                  ))}
-                  
+                    .filter((user) => {
+                      if (search == "") {
+                        return user
+                      } else if (user.name.toLowerCase().includes(search.toLowerCase())) {
+                        return user
+                      }
+                    })
+                    // sort random
+                    .sort(() => Math.random() - 0.5)
+                    .map((user, index) => (
+                      <Card key={index} user={user} bannerColor={user.banner_color} name={user.name} username={user.username} github={user.github} about={user.about} />
+                    ))}
+
                 </div>
               </div>
 
               {/* Reached end of the list show a text*/}
               <div className="col-span-1 mb-5">
-                    <div className="flex items-center justify-center h-full">
-                      <p className="text-gray-400">No more profiles found :)</p>
-                    </div>
-                  </div>
+                <div className="flex items-center justify-center h-full">
+                  <p className="text-gray-400">No more profiles found :)</p>
+                </div>
+              </div>
             </div>
           ) : (
             <div className="grid h-screen px-4 place-content-center">
@@ -169,6 +162,28 @@ const Home = () => {
               </div>
             </div>
           )}
+
+          <div className='banner fixed inset-x-0 bottom-0'>
+          <div className="flex items-center justify-between gap-4 bg-white/5 px-4 py-3 text-white" >
+            <p className="text-sm font-medium">
+              Developed with <i className="bi bi-heart-fill text-red-500"></i> by <Link href="https://hellofaizan.me" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-500 cursor-pointer">@hellofaizan</Link> ( Open Source )
+            </p>
+
+            <button aria-label="Dismiss" onClick={dismiss} className="shrink-0 rounded-lg bg-black/10 p-1 transition hover:bg-white/10">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                viewBox="0 0 20 20"
+                fill="currentColor">
+                <path
+                  fill-rule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+          </div>
 
 
         </motion.div>
