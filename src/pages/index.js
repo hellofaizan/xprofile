@@ -83,7 +83,7 @@ const Home = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.2 }}>
 
-          <header className="">
+          <header className=""> 
             <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
               <div className="flex h-16 items-center justify-between">
                 <div className="md:flex md:items-center md:gap-12">
@@ -129,8 +129,8 @@ const Home = () => {
           </header>
 
           {data.length > 0 ? (
-            <div className='flex flex-col'>
-              <div className="grid grid-cols-1 gap-4 px-4 py-8 mx-auto max-w-screen-xl sm:px-6 lg:px-8">
+            <div className='flex flex-col mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8'>
+              <div className="grid grid-cols-1 gap-4 py-4 ">
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
                   {data
                   .filter((user) => {
@@ -148,6 +148,7 @@ const Home = () => {
                   
                 </div>
               </div>
+
               {/* Reached end of the list show a text*/}
               <div className="col-span-1 mb-5">
                     <div className="flex items-center justify-center h-full">
