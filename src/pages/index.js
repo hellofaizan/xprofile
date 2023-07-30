@@ -110,7 +110,7 @@ const Home = () => {
                       <div className="relative w-full">
                         <input type="text" onChange={(e) => setSearch(e.target.value)} id="simple-search" className=" border text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-3 p-2.5  bg-[#0e0e0e] border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search user profile..." required></input>
                       </div>
-                      <Link href={"https://github.com/hellofaizan/xprofile"} className="p-3 ml-2 text-sm font-medium text-white bg-[#0e0e0e] rounded-lg focus:ring-2 focus:outline-none hover:bg-gray-900 focus:ring-gray-700 border border-gray-600">
+                      <Link href={"https://github.com/hellofaizan/xprofile"} className="p-2.5 ml-2 text-sm font-medium text-white bg-[#0e0e0e] rounded-lg focus:ring-2 focus:outline-none hover:bg-gray-900 focus:ring-gray-700 border border-gray-600">
                         ⭐
                         <span className="sr-only">Contribute</span>
                       </Link>
@@ -145,7 +145,7 @@ const Home = () => {
               {/* Reached end of the list show a text*/}
               <div className="col-span-1 mb-5">
                 <div className="flex items-center justify-center h-full">
-                  <p className="text-gray-400">End of the profile list :)</p>
+                  <p className="text-gray-400">End of list :) <Link href={"https://github.com/hellofaizan/xprofile"} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-500 cursor-pointer italic">Add Yours</Link></p>
                 </div>
               </div>
             </div>
