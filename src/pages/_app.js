@@ -3,6 +3,7 @@ import Head from 'next/head'
 import "bootstrap-icons/font/bootstrap-icons.css";
 // 1. import `NextUIProvider` component
 import { NextUIProvider, createTheme } from '@nextui-org/react';
+import { Analytics } from '@vercel/analytics/react';
 
 // 2. create a custom theme
 const darkTheme = createTheme({type: 'dark'});
@@ -59,6 +60,7 @@ export default function App({ Component, pageProps }) {
 
       <NextUIProvider theme={darkTheme}>
         <Component {...pageProps} />
+        <Analytics />
       </NextUIProvider>
     </>
   )
