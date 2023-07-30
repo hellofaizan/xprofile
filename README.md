@@ -8,10 +8,9 @@ A website to list your Twitter ( 𝕏 ) and Github profile to the world
 
 ## Languages/Tools
 
-<table><tr><td valign="center"><img style="color:white" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nextjs-colored.svg" width="36" height="36" alt="HTML5" />
-<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/tailwindcss-colored.svg" width="36" height="36" alt="CSS3" />
-     <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg" width="36" height="36" alt="CSS3" />
-<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg" width="36" height="36" alt="JavaScript" /></td></tr></table>
+<a href="https://discord.gg/EHthxHRUmr">
+    <img src="https://skillicons.dev/icons?i=next,js,react,firebase" />
+  </a>
 
 ## 👩🏽‍💻 Demo
 
