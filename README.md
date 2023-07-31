@@ -101,10 +101,6 @@ yarn
 yarn run dev
 ```
 
-## 🛡️ License
-
-𝕏 Profile is licensed under the MIT License - see the [LICENSE](Licence) file for details.
-
 ## 💪🏽 Contributors
 
 Thank you so much all for spending your time to improve 𝕏 Profile.
