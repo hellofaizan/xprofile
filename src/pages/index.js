@@ -198,40 +198,9 @@ const Home = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.2 }}>
 
-        <header className="">
-          <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-            <div className="flex h-16 items-center justify-between">
-              <div className="md:flex md:items-center md:gap-12">
-                <Link className="block " href="/">
-                  <span className="sr-only">Home</span>
-                  <Image src="/x_large.png" alt="Logo" width={40} height={40} priority />
-                </Link>
-              </div>
-
-              <div className="flex items-center gap-4">
-                <div className="sm:flex sm:gap-4">
-                  <Link
-                    className="rounded-md bg-gray-700 px-5 py-2.5 text-sm font-medium hover:bg-gray-600 text-white shadow"
-                    href="https://github.com/hellofaizan/xprofile" target="_blank" rel="noopener noreferrer" title='Add your 𝕏 (Twitter) Profile to this list :)'
-                  >
-                    Contribute ⭐
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </header>
-
         {/* Loading */}
         <div className="grid h-screen px-4 place-content-center">
-          <div
-            className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
-            role="status">
-            <span
-              className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
-            >Loading...</span
-            >
-          </div>
+          <Image src="/x_large.png" alt="Logo" width={40} height={40} priority />
         </div>
 
       </motion.div>
