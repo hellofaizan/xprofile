@@ -3,7 +3,7 @@
 A website to list your Twitter ( 𝕏 ) and Github profile to the world
 
 
-![image](https://github.com/hellofaizan/xprofile/assets/84437051/1e8cbe14-c739-4991-be79-f6d93f438234)
+![image](https://github.com/hellofaizan/xprofile/assets/84437051/009c11f6-56e5-415a-89b0-a53f362c43f1)
 
 
 ## Languages/Tools
@@ -33,7 +33,7 @@ Check out the website: [𝕏 Profiles](https://x.hellofaizan.me)
 | name | This value should be your real name. |
 | github | The value should be your Github username                   |
 | banner_color | The value should contain any hex code for background just like Twitter eg: #fff, #000   |
-| about | Short simple 2 lines about yourself, You can also include links which are clickable   |
+| about | Short simple `just 2 lines` about yourself, You can also include links which are clickable   |
     
 
 ## 🛠️ Installation Steps
@@ -107,7 +107,7 @@ yarn run dev
 
 ## 💪🏽 Contributors
 
-Thank you so much all for spending your time to improve 𝕏 Profile. Keep shining ⭐
+Thank you so much all for spending your time to improve 𝕏 Profile.
 
 <a href="https://github.com/hellofaizan/xprofile/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=hellofaizan/xprofile" />
