@@ -107,7 +107,7 @@ yarn run dev
 
 ## 💪🏽 Contributors
 
-Thank you so much all for spending your time to improve 𝕏 Profile. Keep shining ⭐
+Thank you so much all for spending your time to improve 𝕏 Profile.
 
 <a href="https://github.com/hellofaizan/xprofile/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=hellofaizan/xprofile" />
