@@ -33,7 +33,7 @@ Check out the website: [𝕏 Profiles](https://x.hellofaizan.me)
 | name | This value should be your real name. |
 | github | The value should be your Github username                   |
 | banner_color | The value should contain any hex code for background just like Twitter eg: #fff, #000   |
-| about | Short simple `just 2 lines` about yourself, You can also include links which are clickable   |
+| about | Short simple `max 3 lines` about yourself, You can also include links which are clickable   |
     
 
 ## 🛠️ Installation Steps
