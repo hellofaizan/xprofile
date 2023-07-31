@@ -98,7 +98,7 @@ const Home = () => {
                 <div className="flex items-center gap-4">
                   <div className="sm:flex items-center hidden sm:gap-4">
 
-                    <Link href={"https://twitter.com/hellofaizaan"} target="_blank" rel="noopener noreferrer" ><i className="bi bi-twitter text-2xl hover:text-blue-600"></i></Link>
+                    <Link href={"https://twitter.com/hellofaizaan"} target="_blank" rel="noopener noreferrer" ><i className="bi bi-twitter text-2xl hover:text-blue-500"></i></Link>
                     <Link href={"https://github.com/hellofaizan"} target="_blank" rel="noopener noreferrer" ><i className="bi bi-github text-2xl"></i></Link>
                     <Link
                       lassName="rounded-md bg-[#0e0e0e] border border-gray-600 px-5 py-2.5 text-sm font-medium hover:bg-gray-600 text-white shadow"
@@ -108,13 +108,13 @@ const Home = () => {
                     </Link>
                   </div>
                   <div className="block sm:hidden">
-                    <form className="flex items-center">
+                    <form className="fitems-center">
                       <label htmlFor="simple-search" className="sr-only">Search</label>
                       <div className="relative w-full">
                         <input type="text" onChange={(e) => setSearch(e.target.value)} id="simple-search" className=" border text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-3 p-2.5  bg-[#0e0e0e] border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search user profile..." required></input>
                       </div>
                       <Link href={"https://github.com/hellofaizan/xprofile"} className="p-2.5 ml-2 text-sm font-medium text-white bg-[#0e0e0e] rounded-lg focus:ring-2 focus:outline-none hover:bg-gray-900 focus:ring-gray-700 border border-gray-600">
-                        ⭐
+                        ⭐lex 
                         <span className="sr-only">Contribute</span>
                       </Link>
                     </form>
