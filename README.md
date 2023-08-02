@@ -33,14 +33,14 @@ Check out the website: [𝕏 Profiles](https://x.hellofaizan.me)
 | name | This value should be your real name. |
 | github | The value should be your Github username                   |
 | banner_color | The value should contain any hex code for background just like Twitter eg: #fff, #000   |
-| about | Short simple `max 3 lines` about yourself, You can also include links which are clickable   |
+| about | Short simple `max 2 lines` about yourself, You can also include links which are clickable   |
     
 
 ## 🛠️ Installation Steps
 
 - [Fork](https://github.com/hellofaizan/xprofile/fork) the project. Click on the <a href="https://github.com/hellofaizan/xprofile/fork"><img src="https://i.imgur.com/G4z1kEe.png" height="15" width="15"></a> icon in the top right to get started.
 
-- Use these commands in your git bash to make a clone of the project in your pc.
+- Use this commands in your git bash to make a clone of the project in your pc.
 
 ### SSH [Github Docs](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
 
@@ -48,23 +48,7 @@ Check out the website: [𝕏 Profiles](https://x.hellofaizan.me)
 $ git clone git@github.com:username/xprofile
 ```
 
-### GitHub CLI
-
-```bash
-$ gh repo clone username/xprofile
-```
-
-### HTTPS
-
-```bash
-$ git clone https://github.com/username/xprofile
-```
-
-- Navigate to the project directory:
-
-```bash
-cd xprofile
-```
+- Navigate to the project directory.
 
 ## 🔥 Add your profile
 
@@ -92,6 +76,7 @@ cd xprofile
 
 - And finally create a [Pull Request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)!
 - Great job! You did it!
+- Remember to PR in '''dev branch of repository'''
 
 
 ## 🚀 Running locally
