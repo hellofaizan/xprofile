@@ -31,7 +31,7 @@ const card = (props) => {
               </div>
             </div>
 
-            <p className='mx-4 md:mx-5 text-base md:h-[48px] text-ellipsis line-clamp-none md:line-clamp-3'>{aboutWithoutLink} <Link href={aboutLink} target="_blank" rel="noopener noreferrer" className='text-blue-400 hover:text-blue-500 cursor-pointer'>{aboutLink}</Link></p>
+            <p className='mx-4 md:mx-5 text-base md:h-[48px] overflow-hidden text-ellipsis line-clamp-none md:line-clamp-3'>{aboutWithoutLink} <Link href={aboutLink} target="_blank" rel="noopener noreferrer" className='text-blue-400 hover:text-blue-500 cursor-pointer'>{aboutLink}</Link></p>
 
             {/* Follow on github and on twitter button 2 in column */}
             <div className='flex flex-col gap-2 text-center md:flex-row justify-between mt-2 mb-4 mx-4 md:mx-5'>
@@ -67,7 +67,7 @@ const card = (props) => {
               </div>
             </div>
 
-            <div className='mx-4 md:mx-5 text-base md:h-[48px] md:text-ellipsis line-clamp-none md:line-clamp-3'>{props.about}</div>
+            <div className='mx-4 md:mx-5 text-base overflow-hidden md:h-[48px] md:text-ellipsis line-clamp-none md:line-clamp-3'>{props.about}</div>
 
             {/* Follow on github and on twitter button 2 in column */}
             <div className='flex flex-col gap-2 text-center md:flex-row justify-between mt-2 mb-4 mx-4 md:mx-5'>
