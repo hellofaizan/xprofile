@@ -76,7 +76,7 @@ $ git clone git@github.com:username/xprofile
 
 - And finally create a [Pull Request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)!
 - Great job! You did it!
-- Remember to PR in '''dev branch of repository'''
+- Remember to PR in ```dev branch of repository```
 
 
 ## 🚀 Running locally
