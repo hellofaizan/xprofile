@@ -1,6 +1,7 @@
 import '@/styles/globals.css'
 import Head from 'next/head'
 import "bootstrap-icons/font/bootstrap-icons.css";
+import Script from 'next/script'
 // 1. import `NextUIProvider` component
 import { NextUIProvider, createTheme } from '@nextui-org/react';
 import { Analytics } from '@vercel/analytics/react';
@@ -58,8 +59,8 @@ export default function App({ Component, pageProps }) {
         />
       </Head>
 
-      <script strategy="afterInteractive" async src="https://www.googletagmanager.com/gtag/js?id=G-GV02M4EWW9"></script>
-      <script strategy="afterInteractive" id="google-analytics">
+      <Script strategy="afterInteractive" async src="https://www.googletagmanager.com/gtag/js?id=G-GV02M4EWW9"></Script>
+      <Script strategy="afterInteractive" id="google-analytics">
         {`
         window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
@@ -67,7 +68,7 @@ export default function App({ Component, pageProps }) {
 
               gtag('config', 'G-GV02M4EWW9');
         `}
-      </script>
+      </Script>
 
       <NextUIProvider theme={darkTheme}>
         <Component {...pageProps} />
