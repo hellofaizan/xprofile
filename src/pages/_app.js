@@ -58,6 +58,17 @@ export default function App({ Component, pageProps }) {
         />
       </Head>
 
+      <script strategy="afterInteractive" async src="https://www.googletagmanager.com/gtag/js?id=G-GV02M4EWW9"></script>
+      <script strategy="afterInteractive" id="google-analytics">
+        {`
+        window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+              gtag('config', 'G-GV02M4EWW9');
+        `}
+      </script>
+
       <NextUIProvider theme={darkTheme}>
         <Component {...pageProps} />
         <Analytics />
