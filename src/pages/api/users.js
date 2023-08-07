@@ -2,7 +2,9 @@
 
 export default function handler(req, res) {
   // read users from a local JSON file
-  const users = require('/data/users.json')
+  let users = require('/data/users.json')
+  users = users.slice(0, parseInt(req.query.count))
+
   res.status(200).json(users)
 
 }
