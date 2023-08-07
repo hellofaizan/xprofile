@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const card = (props) => {
   const about = props.about;
-  const aboutWithoutLink;
+  const aboutWithoutLink = props.about;
   const aboutLink = about.includes("http");
   // if aboutLink is true, then make it clickable
   if (aboutLink) {
