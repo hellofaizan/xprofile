@@ -4,6 +4,7 @@ import Link from "next/link";
 
 const card = (props) => {
   const about = props.about;
+  const aboutWithoutLink;
   const aboutLink = about.includes("http");
   // if aboutLink is true, then make it clickable
   if (aboutLink) {
@@ -11,7 +12,7 @@ const card = (props) => {
     const aboutLink = aboutArray.find((element) => element.includes("http"));
     const aboutLinkIndex = aboutArray.indexOf(aboutLink);
     aboutArray.splice(aboutLinkIndex, 1);
-    const aboutWithoutLink = aboutArray.join(" ");
+    aboutWithoutLink = aboutArray.join(" ");
   }
 
   return (
