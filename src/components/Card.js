@@ -1,20 +1,19 @@
-import React from "react";
+import React, {useState} from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 const card = (props) => {
   const about = props.about;
-  aboutWithoutLink;
+  const [ aboutLink, setAboutLink ] = useState("");
+  const [ aboutWithoutLink, setAboutWithoutLink ] = useState("");
   const aboutLink = about.includes("http");
   // if aboutLink is true, then make it clickable
   if (aboutLink) {
     const aboutArray = about.split(" ");
-    const aboutLink = aboutArray.find((element) => element.includes("http"));
+    setAboutLink = aboutArray.find((element) => element.includes("http"));
     const aboutLinkIndex = aboutArray.indexOf(aboutLink);
     aboutArray.splice(aboutLinkIndex, 1);
-    const aboutWithoutLink = aboutArray.join(" ");
-		return (aboutWithoutLink, aboutLink);
-
+    setAboutWithoutLink = aboutArray.join(" ");
   }
 
   return (
