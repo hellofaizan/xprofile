@@ -1,14 +1,13 @@
-import '@/styles/globals.css'
-import Head from 'next/head'
+import "@/styles/globals.css";
+import Head from "next/head";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import Script from 'next/script'
+import Script from "next/script";
 // 1. import `NextUIProvider` component
-import { NextUIProvider, createTheme } from '@nextui-org/react';
-import { Analytics } from '@vercel/analytics/react';
+import { NextUIProvider, createTheme } from "@nextui-org/react";
+import { Analytics } from "@vercel/analytics/react";
 
 // 2. create a custom theme
-const darkTheme = createTheme({type: 'dark'});
-
+const darkTheme = createTheme({ type: "dark" });
 
 export default function App({ Component, pageProps }) {
   return (
@@ -27,9 +26,14 @@ export default function App({ Component, pageProps }) {
         <meta name="author" content="Hello Faizan" />
         <link rel="apple-touch-icon" href="/x_large.png" />
 
-
-        <meta property="og:title" content="𝕏 Profile - Your Twitter Profile Card" />
-        <meta property="og:site_name" content="Showcase your 𝕏 profile to world" />
+        <meta
+          property="og:title"
+          content="𝕏 Profile - Your Twitter Profile Card"
+        />
+        <meta
+          property="og:site_name"
+          content="Showcase your 𝕏 profile to world"
+        />
         <meta property="og:url" content="https://xprofile.hellofaizan.me" />
 
         <meta
@@ -47,7 +51,10 @@ export default function App({ Component, pageProps }) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@HelloFaizaan" />
         <meta name="twitter:creator" content="@HelloFaizaan" />
-        <meta name="twitter:title" content="𝕏 Profile - Your Twitter Profile Card" />
+        <meta
+          name="twitter:title"
+          content="𝕏 Profile - Your Twitter Profile Card"
+        />
         <meta
           name="twitter:description"
           content="Showcase your 𝕏 profile to world and get recomendations from community."
@@ -59,21 +66,27 @@ export default function App({ Component, pageProps }) {
         />
       </Head>
 
-      <Script strategy="afterInteractive" async src="https://www.googletagmanager.com/gtag/js?id=G-GV02M4EWW9"></Script>
-      <Script strategy="afterInteractive" id="google-analytics">
-        {`
-        window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-              gtag('config', 'G-GV02M4EWW9');
-        `}
-      </Script>
-
       <NextUIProvider theme={darkTheme}>
+
+        <Script
+          strategy="afterInteractive"
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-GV02M4EWW9"
+        ></Script>
+
+        <Script strategy="afterInteractive" id="google-analytics">
+          {`
+             window.dataLayer = window.dataLayer || [];
+             function gtag(){dataLayer.push(arguments);}
+             gtag('js', new Date());
+
+             gtag('config', 'G-GV02M4EWW9');
+          `}
+        </Script>
+
         <Component {...pageProps} />
         <Analytics />
       </NextUIProvider>
     </>
-  )
+  );
 }
