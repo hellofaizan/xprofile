@@ -94,6 +94,10 @@ Thank you so much all for spending your time to improve 𝕏 Profile.
   <img src="https://contrib.rocks/image?repo=hellofaizan/xprofile" />
 </a>
 
+## Repository Activity
+
+![Alt](https://repobeats.axiom.co/api/embed/3c905c2b26fc447eb080acba085a899468acd7e3.svg "Repobeats analytics image")
+
 # Join Discord 💻
 
 <a href="https://discord.gg/vUHMxPvege">
