@@ -10,10 +10,10 @@ const card = (props) => {
   // if aboutLink is true, then make it clickable
   if (aboutLink) {
     const aboutArray = about.split(" ");
-    setAboutLink = aboutArray.find((element) => element.includes("http"));
+    setAboutLink(aboutArray.find((element) => element.includes("http")))
     const aboutLinkIndex = aboutArray.indexOf(aboutLink);
     aboutArray.splice(aboutLinkIndex, 1);
-    setAboutWithoutLink = aboutArray.join(" ");
+    setAboutWithoutLink(aboutArray.join(" "))
   }
 
   return (
