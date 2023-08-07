@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const card = (props) => {
+const Card = (props) => {
   const about = props.about;
   const [ aboutLink, setAboutLink ] = useState(about.includes("http"));
   const [ aboutWithoutLink, setAboutWithoutLink ] = useState("");
@@ -93,4 +93,4 @@ const card = (props) => {
   );
 };
 
-export default card;
+export default Card;
