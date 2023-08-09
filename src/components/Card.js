@@ -24,7 +24,7 @@ const card = (props) => {
 
           <div className='flex flex-col'>
 
-            <div className=' h-20 md:h-24' style={{ backgroundColor: props.bannerColor }}></div>
+            <div className='h-20 md:h-24' style={{ backgroundColor: props.bannerColor }}></div>
 
             <div className='flex space-x-2'>
               <Image src={"https://avatars.githubusercontent.com/" + props.github} alt={props.name} width={95} height={95} className="rounded-full ml-2 md:ml-4 -mt-8 border-4 border-black" />
@@ -42,8 +42,8 @@ const card = (props) => {
 
             {/* Follow on github and on twitter button 2 in column */}
             <div className='flex flex-col gap-2 text-center md:flex-row justify-between mt-2 mb-4 mx-4 md:mx-5'>
-              <Link href={"https://github.com/" + props.github} target="_blank" rel="noopener noreferrer" className='px-4 py-2 text-sm font-medium text-white bg-gray-700 rounded hover:bg-gray-600 focus:outline-none focus:ring'>Follow on Github <i className='bi bi-github'></i></Link>
-              <Link href={"https://twitter.com/" + props.username} target="_blank" rel="noopener noreferrer" className='px-4 py-2 text-sm font-medium text-white bg-gray-700 rounded hover:bg-gray-600 focus:outline-none focus:ring'>Follow on Twitter <i className='bi bi-twitter'></i></Link>
+              <Link href={"https://github.com/" + props.github} target="_blank" rel="noopener noreferrer" className='px-4 py-2 text-sm font-medium text-white bg-gray-700 rounded hover:bg-gray-600 focus:outline-none focus:ring'>Follow on GitHub <i className='bi bi-github'></i></Link>
+              <Link href={"https://x.com/" + props.username} target="_blank" rel="noopener noreferrer" className='px-4 py-2 text-sm font-medium text-white bg-gray-700 rounded hover:bg-gray-600 focus:outline-none focus:ring'>Follow on 𝕏</Link>
             </div>
 
           </div>
