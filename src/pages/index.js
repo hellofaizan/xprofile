@@ -98,7 +98,7 @@ const Home = () => {
                 <div className="flex items-center gap-4">
                   <div className="sm:flex items-center hidden sm:gap-4">
 
-                    <Link href={"https://twitter.com/hellofaizaan"} target="_blank" rel="noopener noreferrer" ><i className="bi bi-twitter text-2xl hover:text-blue-500"></i></Link>
+                    <Link href={"https://x.com/hellofaizaan"} target="_blank" rel="noopener noreferrer" ><p className="bi text-2xl hover:text-blue-500">𝕏</p></Link>
                     <Link href={"https://github.com/hellofaizan"} target="_blank" rel="noopener noreferrer" ><i className="bi bi-github text-2xl"></i></Link>
                     <Link
                       className="rounded-md bg-[#0e0e0e] border border-gray-600 px-5 py-2.5 text-sm font-medium hover:bg-gray-600 text-white shadow"
