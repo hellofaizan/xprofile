@@ -3,7 +3,7 @@
 A website to list your Twitter ( 𝕏 ) and Github profile to the world
 
 
-![image](https://github.com/hellofaizan/xprofile/assets/84437051/009c11f6-56e5-415a-89b0-a53f362c43f1)
+![image](./public/Hero.png)
 
 
 ## Languages/Tools
@@ -93,6 +93,10 @@ Thank you so much all for spending your time to improve 𝕏 Profile.
 <a href="https://github.com/hellofaizan/xprofile/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=hellofaizan/xprofile" />
 </a>
+
+## Repository Activity
+
+![Alt](https://repobeats.axiom.co/api/embed/3c905c2b26fc447eb080acba085a899468acd7e3.svg "Repobeats analytics image")
 
 # Join Discord 💻
 

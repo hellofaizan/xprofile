@@ -28,6 +28,13 @@
         "about": "Paradoxically Naive Rational Optimist | Likes Technology,Open Source and Exploring Finance | Loves Podcasts, Books and Memes"
     },
     {
+        "username": "bhavaygarg",
+        "name": "Bhavay Garg",
+        "github": "0takugod",
+        "banner_color": "#48D1CC",
+        "about": "CSE + Games + Anime + Open source = Me. | I love coffee. "
+    },
+    {
         "username": "farfa7886",
         "name": "Farfa",
         "github": "Farfa7886",
@@ -35,10 +42,25 @@
         "about": "15 y/o kid from Italy that has a passion for programming"
     },
     {
-	"username": "Sxamoecode",
-	"name": "Samuel",
-	"github" : "Sxamoecode",
-	"banner_color": "#86098f",
-	"about": "Software engineer | Backend development | Problem Solver | Loves contributing to Open Source && Collaborating"
+	      "username": "Sxamoecode",
+	      "name": "Samuel",
+	      "github" : "Sxamoecode",
+	      "banner_color": "#86098f",
+	      "about": "Software engineer | Backend development | Problem Solver | Loves contributing to Open Source && Collaborating"
+    },
+     {
+        "username": "okkattiboy",
+        "name": "Akshara Hegde",
+        "github": "aksharahegde",
+        "banner_color": "#00dbda",
+        "about": "Senior Fullstack Engineer | Writer | Visit aksharahegde.xyz"
+    },
+    {
+        "username": "BacotMath",
+        "name": "Bang Domath",
+        "github": "DomathID",
+        "banner_color": "#008080",
+        "about": "I I'am just an NPC | Anime Enthusiast | Write yukinoshita.web.id"
     }
+    
 ]
