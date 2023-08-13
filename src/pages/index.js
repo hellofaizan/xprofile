@@ -8,65 +8,21 @@ import Card from '../components/Card'
 
 const Home = () => {
   const [search, setSearch] = useState(false)
-  const fetcher = (...args) => fetch(...args).then(res => res.json())
+  const [data, setData] = useState()
 
-  const { data, error } = useSWR('/api/users', fetcher)
+  useEffect(() => {
+    fetch12Users()
+  }, []);
 
-  const dismiss = () => {
-    document.querySelector('.banner').classList.remove('md:block').classList.add('md:hidden')
-  }
-
-  if (error) return <>
-    <motion.div
-      initial={{ opacity: 0, scale: 0.95 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.2 }}>
-
-      <header className="">
-        <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-          <div className="flex h-16 items-center justify-between">
-            <div className="md:flex md:items-center md:gap-12">
-              <Link className="block " href="/">
-                <span className="sr-only">Home</span>
-                <Image src="/x_large.png" alt="Logo" width={40} height={40} priority />
-              </Link>
-            </div>
-
-            <div className="flex items-center gap-4">
-              <div className="sm:flex sm:gap-4">
-                <Link
-                  className="rounded-md bg-gray-700 px-5 py-2.5 text-sm font-medium hover:bg-gray-600 text-white shadow"
-                  href="https://github.com/hellofaizan/xprofile" target="_blank" rel="noopener noreferrer" title='Add your 𝕏 (Twitter) Profile to this list :)'
-                >
-                  Contribute ⭐
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      <div className="grid h-screen px-4 place-content-center">
-        <div className="text-center">
-          <h1 className="font-black text-gray-200 text-9xl">404</h1>
-
-          <p className="text-2xl font-bold tracking-tight text-gray-200 sm:text-4xl">
-            Uh-oh!
-          </p>
-
-          <p className="mt-4 text-gray-400">Error loading data to screen.</p>
-
-          <Link
-            href="https://github.com/hellofaizan/xprofile"
-            className="inline-block px-5 py-3 mt-6 text-sm font-medium text-white bg-indigo-600 rounded hover:bg-indigo-700 focus:outline-none focus:ring"
-          >
-            Report Error
-          </Link>
-        </div>
-      </div>
-
-    </motion.div>
-  </>
+  const fetch12Users = async () => {
+    try {
+      const response = await fetch("/api/explore");
+      const apiData = await response.json();
+      setData(apiData);
+    } catch (error) {
+      console.error("Error fetching random user subset:", error);
+    }
+  };
 
   if (data) {
     return (
@@ -98,8 +54,8 @@ const Home = () => {
                 <div className="flex items-center gap-4">
                   <div className="sm:flex items-center hidden sm:gap-4">
 
-                    <Link href={"https://x.com/hellofaizaan"} target="_blank" rel="noopener noreferrer" className='rounded-md border border-gray-600 px-2.5 py-1.5 text-xl font-medium hover:bg-gray-600 text-white shadow'>𝕏</Link>
-                    <Link href={"https://github.com/hellofaizan"} target="_blank" rel="noopener noreferrer" className='rounded-md border border-gray-600 px-2.5 py-1.5 text-xl font-medium hover:bg-gray-600 text-white shadow'><i className="bi bi-github"></i></Link>
+                    <Link href={"https://x.com/hellofaizaan"} target="_blank" rel="noopener noreferrer" className='rounded-md bg-[#0e0e0e] border border-gray-600 px-2.5 py-1.5 text-xl font-medium hover:bg-gray-600 text-white shadow'>𝕏</Link>
+                    <Link href={"https://github.com/hellofaizan"} target="_blank" rel="noopener noreferrer" className='rounded-md bg-[#0e0e0e] border border-gray-600 px-2.5 py-1.5 text-xl font-medium hover:bg-gray-600 text-white shadow'><i className="bi bi-github"></i></Link>
                     <Link
                       className="rounded-md bg-[#0e0e0e] border border-gray-600 px-5 py-2.5 text-sm font-medium hover:bg-gray-600 text-white shadow"
                       href="https://github.com/hellofaizan/xprofile" target="_blank" rel="noopener noreferrer" title='Add your 𝕏 (Twitter) Profile to this list :)'
@@ -138,8 +94,6 @@ const Home = () => {
                         return user
                       }
                     })
-                    // sort random
-                    .sort(() => Math.random() - 0.5)
                     .map((user, index) => (
                       <Card key={index} user={user} bannerColor={user.banner_color} name={user.name} username={user.username} github={user.github} about={user.about} />
                     ))}
