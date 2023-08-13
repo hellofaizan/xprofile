@@ -98,8 +98,8 @@ const Home = () => {
                 <div className="flex items-center gap-4">
                   <div className="sm:flex items-center hidden sm:gap-4">
 
-                    <Link href={"https://x.com/hellofaizaan"} target="_blank" rel="noopener noreferrer" ><p className="bi text-2xl hover:text-blue-500">𝕏</p></Link>
-                    <Link href={"https://github.com/hellofaizan"} target="_blank" rel="noopener noreferrer" ><i className="bi bi-github text-2xl"></i></Link>
+                    <Link href={"https://x.com/hellofaizaan"} target="_blank" rel="noopener noreferrer" className='rounded-md border border-gray-600 px-2.5 py-1.5 text-xl font-medium hover:bg-gray-600 text-white shadow'>𝕏</Link>
+                    <Link href={"https://github.com/hellofaizan"} target="_blank" rel="noopener noreferrer" className='rounded-md border border-gray-600 px-2.5 py-1.5 text-xl font-medium hover:bg-gray-600 text-white shadow'><i className="bi bi-github"></i></Link>
                     <Link
                       className="rounded-md bg-[#0e0e0e] border border-gray-600 px-5 py-2.5 text-sm font-medium hover:bg-gray-600 text-white shadow"
                       href="https://github.com/hellofaizan/xprofile" target="_blank" rel="noopener noreferrer" title='Add your 𝕏 (Twitter) Profile to this list :)'
@@ -123,7 +123,9 @@ const Home = () => {
               </div>
             </div>
           </header>
-
+          
+          <div>
+            
           {data.length > 0 ? (
             <div className='flex flex-col mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8'>
               <div className="grid grid-cols-1 gap-4 py-4 ">
@@ -165,27 +167,6 @@ const Home = () => {
               </div>
             </div>
           )}
-
-          <div className='banner hidden md:block fixed inset-x-0 bottom-0'>
-            <div className="flex items-center justify-between gap-4 bg-white/5 px-4 py-3 text-white" >
-              <p className="text-sm font-medium">
-                Developed with <i className="bi bi-heart-fill text-red-500"></i> by <Link href="https://hellofaizan.me" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-500 cursor-pointer">@hellofaizan</Link> ( Open Source )
-              </p>
-
-              <button aria-label="Dismiss" onClick={dismiss} className="shrink-0 rounded-lg bg-black/10 p-1 transition hover:bg-white/10">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  viewBox="0 0 20 20"
-                  fill="currentColor">
-                  <path
-                    fill-rule="evenodd"
-                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-              </button>
-            </div>
           </div>
 
         </motion.div>
