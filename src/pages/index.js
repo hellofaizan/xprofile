@@ -95,27 +95,30 @@ const Home = () => {
             </div>
           </header>
 
-          <div>
-            <div className='flex flex-col mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 pb-4'>
+          <div className='pb-5'>
 
-              <InfiniteScroll
-                dataLength={data.length} //This is important field to render the next data
-                next={fetchMoreData}
-                hasMore={allCount === data.length}
-                loader={
-                  <div style={{ textAlign: 'center' }}
-                    className="inline-block h-4 w-4 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]">
+            <InfiniteScroll
+              dataLength={data.length} //This is important field to render the next data
+              next={fetchMoreData}
+              hasMore={allCount === data.length}
+              loader={
+                <div className='w-full justify-center inline-flex items-baseline'>
+                  <div
+                    className="inline-block items-center justify-center h-4 w-4 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]">
                     <span
                       className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
                       Loading...
                     </span>
-                  </div>}
-                endMessage={
-                  <p style={{ textAlign: 'center' }}>
-                    <b>Yay! You have seen it all</b>
-                  </p>
-                }>
-
+                  </div>
+                </div>}
+              endMessage={
+                <div className='w-full justify-center inline-flex items-baseline'>
+                  <p>That&apos;s It! </p>
+                  <Link className='ml-2 text-blue-500' href={"https://github.com/hellofaizan/xprofile"}>Add your profile</Link>
+                  <Image width={13} height={13} alt="Fork Logo" src={"https://i.imgur.com/G4z1kEe.png"}></Image>
+                </div>
+              }>
+              <div className='flex flex-col mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8'>
                 <div className="grid grid-cols-1 gap-4 py-4 ">
                   <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
 
@@ -134,8 +137,9 @@ const Home = () => {
 
                   </div>
                 </div>
-              </InfiniteScroll>
-            </div>
+              </div>
+            </InfiniteScroll>
+
           </div>
 
         </motion.div>
