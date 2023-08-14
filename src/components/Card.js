@@ -35,9 +35,9 @@ const card = (props) => {
             </div>
 
             {aboutLink ? (
-              <p className='mx-4 md:mx-5 text-base overflow-hidden text-ellipsis min-h-[48px] line-clamp-none md:line-clamp-2 md:hover:line-clamp-3 cursor-pointer'>{aboutWithoutLink} <Link href={aboutLinkMain} target="_blank" rel="noopener noreferrer" className='text-blue-400 hover:text-blue-500 cursor-pointer'>{aboutLinkMain}</Link></p>
+              <p className='mx-4 md:mx-5 text-base overflow-hidden text-ellipsis min-h-[48px] line-clamp-none md:line-clamp-2 md:active:line-clamp-3 cursor-pointer'>{aboutWithoutLink} <Link href={aboutLinkMain} target="_blank" rel="noopener noreferrer" className='text-blue-400 hover:text-blue-500 cursor-pointer'>{aboutLinkMain}</Link></p>
             ) : (
-              <div className='mx-4 md:mx-5 text-base overflow-hidden min-h-[48px] text-ellipsis line-clamp-none md:line-clamp-2 md:hover:line-clamp-3 cursor-pointer'>{props.about}</div>
+              <div className='mx-4 md:mx-5 text-base overflow-hidden min-h-[48px] text-ellipsis line-clamp-none md:line-clamp-2 md:active:line-clamp-3 cursor-pointer'>{props.about}</div>
             )}
 
             {/* Follow on github and on twitter button 2 in column */}
