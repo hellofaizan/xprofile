@@ -68,5 +68,13 @@
         "github": "MannuVilasara",
         "banner_color": "#ff1493",
         "about": "Mannu | 16yo from India currenty working in cyber security | Chess, Anime, Coffee | Cats 🐈‍⬛ | Community Manager (Moderator at DEV communtiy)"
+    },
+
+    {
+        "username": "prabhurupe",
+        "name": "Rupesh Prabhu",
+        "github": "rupeshprabhu",
+        "banner_color": "#00dbda",
+        "about": "Rupesh Prabhu | Frontend Developer currently in India | Loves to review and understand technology"
     }
 ]
