@@ -6,6 +6,13 @@
         "banner_color": "#ff2500",
         "about": "Chess♟️ Coding☕ Football⚽ Tech🧑‍💻. I do random stuff just to make other person laugh. Find me => https://hellofaizan.me/"
     },
+	{
+        "username": "abdulqu87130365",
+        "name": "Abdul Quadir",
+        "github": "cdxgh",
+        "banner_color": "#ff2500",
+        "about": " Coding☕  Tech🧑‍💻. I do random stuff just to make other person laugh. Find me => https://abdulquadir-portfolio-website.netlify.app/"
+    },
     {
         "username": "iaminfinil",
         "name": "Infinil",
@@ -68,5 +75,13 @@
         "github": "MannuVilasara",
         "banner_color": "#ff1493",
         "about": "Mannu | 16yo from India currenty working in cyber security | Chess, Anime, Coffee | Cats 🐈‍⬛ | Community Manager (Moderator at DEV communtiy)"
+    },
+
+    {
+        "username": "prabhurupe",
+        "name": "Rupesh Prabhu",
+        "github": "rupeshprabhu",
+        "banner_color": "#00dbda",
+        "about": "Rupesh Prabhu | Frontend Developer currently in India | Loves to review and understand technology"
     }
 ]
