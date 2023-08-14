@@ -3,12 +3,14 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { motion } from "framer-motion"
 import Link from 'next/link'
-import useSWR from 'swr'
+import InfiniteScroll from 'react-infinite-scroll-component';
 import Card from '../components/Card'
 
 const Home = () => {
   const [search, setSearch] = useState(false)
   const [data, setData] = useState()
+  const [count, setCount] = useState(9)
+  const [allCount, setAllCount] = useState(0)
 
   useEffect(() => {
     fetch12Users()
@@ -16,13 +18,25 @@ const Home = () => {
 
   const fetch12Users = async () => {
     try {
-      const response = await fetch("/api/explore");
+      const response = await fetch(`/api/users?count=${count}`);
       const apiData = await response.json();
+      setAllCount(apiData.length)
       setData(apiData);
     } catch (error) {
       console.error("Error fetching random user subset:", error);
     }
   };
+
+  const fetchMoreData = async () => {
+    try {
+      const response2 = await fetch(`/api/users?count=${count + 3}`);
+      setCount(count + 3)
+      const apiData2 = await response2.json();
+      setData(apiData2);
+    } catch (error) {
+      console.error("Error fetching random user subset:", error);
+    }
+  }
 
   if (data) {
     return (
@@ -36,10 +50,10 @@ const Home = () => {
             <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
               <div className="flex h-16 items-center justify-between">
                 <div className="md:flex md:items-center md:gap-12">
-                  <Link className="block " href="/">
+                  <div className="block">
                     <span className="sr-only">Home</span>
                     <Image src="/x_large.png" alt="Logo" width={40} height={40} priority />
-                  </Link>
+                  </div>
                 </div>
 
                 <div className="hidden sm:block">
@@ -54,8 +68,9 @@ const Home = () => {
                 <div className="flex items-center gap-4">
                   <div className="sm:flex items-center hidden sm:gap-4">
 
-                    <Link href={"https://x.com/hellofaizaan"} target="_blank" rel="noopener noreferrer" className='rounded-md bg-[#0e0e0e] border border-gray-600 px-2.5 py-1.5 text-xl font-medium hover:bg-gray-600 text-white shadow'>𝕏</Link>
+                    <Link href={"https://x.com/hellofaizaan"} target="_blank" rel="noopener noreferrer" className='rounded-md bg-[#0e0e0e] border border-gray-600 px-3 py-1.5 text-xl font-medium hover:bg-gray-600 text-white shadow'>𝕏</Link>
                     <Link href={"https://github.com/hellofaizan"} target="_blank" rel="noopener noreferrer" className='rounded-md bg-[#0e0e0e] border border-gray-600 px-2.5 py-1.5 text-xl font-medium hover:bg-gray-600 text-white shadow'><i className="bi bi-github"></i></Link>
+                    <Link href={"https://discord.com/invite/vUHMxPvege"} target="_blank" rel="noopener noreferrer" className='rounded-md bg-[#0e0e0e] border border-gray-600 px-2.5 py-1.5 text-xl font-medium hover:bg-gray-600 text-white shadow'><i className="bi bi-discord"></i></Link>
                     <Link
                       className="rounded-md bg-[#0e0e0e] border border-gray-600 px-5 py-2.5 text-sm font-medium hover:bg-gray-600 text-white shadow"
                       href="https://github.com/hellofaizan/xprofile" target="_blank" rel="noopener noreferrer" title='Add your 𝕏 (Twitter) Profile to this list :)'
@@ -79,48 +94,48 @@ const Home = () => {
               </div>
             </div>
           </header>
-          
+
           <div>
-            
-          {data.length > 0 ? (
-            <div className='flex flex-col mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8'>
-              <div className="grid grid-cols-1 gap-4 py-4 ">
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                  {data
-                    .filter((user) => {
-                      if (search == "") {
-                        return user
-                      } else if (user.name.toLowerCase().includes(search.toLowerCase())) {
-                        return user
-                      }
-                    })
-                    .map((user, index) => (
-                      <Card key={index} user={user} bannerColor={user.banner_color} name={user.name} username={user.username} github={user.github} about={user.about} />
-                    ))}
+            <div className='flex flex-col mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 pb-4'>
 
-                </div>
-              </div>
+              <InfiniteScroll
+                dataLength={data.length} //This is important field to render the next data
+                next={fetchMoreData}
+                hasMore={allCount === data.length}
+                loader={
+                  <div style={{ textAlign: 'center' }}
+                    className="inline-block h-4 w-4 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]">
+                    <span
+                      className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
+                      Loading...
+                    </span>
+                  </div>}
+                endMessage={
+                  <p style={{ textAlign: 'center' }}>
+                    <b>Yay! You have seen it all</b>
+                  </p>
+                }>
 
-              {/* Reached end of the list show a text*/}
-              <div className="col-span-1 mb-5">
-                <div className="flex items-center justify-center h-full">
-                  <p className="text-gray-400">End of list :) <Link href={"https://github.com/hellofaizan/xprofile"} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-500 cursor-pointer italic">Add Yours</Link></p>
+                <div className="grid grid-cols-1 gap-4 py-4 ">
+                  <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+
+                    {data
+                      .filter((user) => {
+                        if (search == "") {
+                          return user
+                        } else if (user.name.toLowerCase().includes(search.toLowerCase())) {
+                          return user
+                        }
+                      })
+                      // .sort(() => Math.random() - 0.5)
+                      .map((user, index) => (
+                        <Card key={index} user={user} bannerColor={user.banner_color} name={user.name} username={user.username} github={user.github} about={user.about} />
+                      ))}
+
+                  </div>
                 </div>
-              </div>
+              </InfiniteScroll>
             </div>
-          ) : (
-            <div className="grid h-screen px-4 place-content-center">
-              <div className="text-center">
-                <h1 className="font-black text-gray-200 text-3xl">No profiles available 😣</h1>
-                <Link
-                  href="https://github.com/hellofaizan/xprofile"
-                  className="inline-block px-5 py-3 mt-6 text-sm font-medium text-white bg-indigo-600 rounded hover:bg-indigo-700 focus:outline-none focus:ring"
-                >
-                  Submit your profile
-                </Link>
-              </div>
-            </div>
-          )}
           </div>
 
         </motion.div>
