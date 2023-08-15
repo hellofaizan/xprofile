@@ -9,12 +9,24 @@ import Card from '../components/Card'
 const Home = () => {
   const [search, setSearch] = useState(false)
   const [data, setData] = useState()
+  const [allData, setAllData] = useState()
   const [count, setCount] = useState(9)
   const [allCount, setAllCount] = useState(0)
 
   useEffect(() => {
+    fetchAllUsers()
     fetch12Users()
   }, []);
+
+  const fetchAllUsers = async () => {
+    try {
+      const response = await fetch(`/api/explore`);
+      const apiData = await response.json();
+      setAllData(apiData);
+    } catch (error) {
+      console.error("Error fetching all users:", error);
+    }
+  }
 
   const fetch12Users = async () => {
     try {
@@ -23,7 +35,7 @@ const Home = () => {
       setAllCount(apiData.length)
       setData(apiData);
     } catch (error) {
-      console.error("Error fetching random user subset:", error);
+      console.error("Error fetching first 9 users:", error);
     }
   };
 
@@ -34,11 +46,11 @@ const Home = () => {
       const apiData2 = await response2.json();
       setData(apiData2);
     } catch (error) {
-      console.error("Error fetching random user subset:", error);
+      console.error("Error fetching more users:", error);
     }
   }
 
-  if (data) {
+  if (data && allData) {
     return (
       <>
         <motion.div
@@ -60,13 +72,13 @@ const Home = () => {
                   <form className="flex items-center w-80">
                     <label htmlFor="simple-search" className="sr-only">Search</label>
                     <div className="relative w-full">
-                      <input type="text" onChange={(e) => setSearch(e.target.value)} id="simple-search" className="border border-gray text-sm rounded-lg block w-full pl-3 p-2.5  bg-[#0e0e0e] border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500" placeholder="Search user profile..." required></input>
+                      <input type="text" onChange={(e) => setSearch(e.target.value)} id="simple-search" className="border border-gray text-sm rounded-lg block w-full pl-3 p-2.5  bg-[#0e0e0e] border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500" placeholder="Search by Name or Username..." required></input>
                     </div>
                   </form>
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <div className="sm:flex items-center hidden sm:gap-4">
+                  <div className="sm:flex items-center hidden sm:gap-2">
 
                     <Link href={"https://x.com/hellofaizaan"} target="_blank" rel="noopener noreferrer" className='rounded-md bg-[#0e0e0e] border border-gray-600 px-3 py-1.5 text-xl font-medium hover:bg-gray-600 text-white shadow'>𝕏</Link>
                     <Link href={"https://github.com/hellofaizan"} target="_blank" rel="noopener noreferrer" className='rounded-md bg-[#0e0e0e] border border-gray-600 px-2.5 py-1.5 text-xl font-medium hover:bg-gray-600 text-white shadow'><i className="bi bi-github"></i></Link>
@@ -101,16 +113,7 @@ const Home = () => {
               dataLength={data.length} //This is important field to render the next data
               next={fetchMoreData}
               hasMore={allCount === data.length}
-              loader={
-                <div className='w-full justify-center inline-flex items-baseline'>
-                  <div
-                    className="inline-block items-center justify-center h-4 w-4 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]">
-                    <span
-                      className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
-                      Loading...
-                    </span>
-                  </div>
-                </div>}
+              
               endMessage={
                 <div className='w-full justify-center inline-flex items-baseline'>
                   <p>That&apos;s It! </p>
@@ -123,17 +126,30 @@ const Home = () => {
                   <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
 
                     {data
-                      .filter((user) => {
-                        if (search == "") {
-                          return user
-                        } else if (user.name.toLowerCase().includes(search.toLowerCase())) {
-                          return user
-                        }
-                      })
+                    .filter((user) => {
+                      if (search == "") {
+                        return user
+                      } else {
+                        return null
+                      }
+                    })
                       // .sort(() => Math.random() - 0.5)
                       .map((user, index) => (
                         <Card key={index} user={user} bannerColor={user.banner_color} name={user.name} username={user.username} github={user.github} about={user.about} />
                       ))}
+
+                    {allData
+                      .filter((user) => {
+                        if (search == "") {
+                          return null
+                        } else if (user.name.toLowerCase().includes(search.toLowerCase()) || user.username.toLowerCase().includes(search.toLowerCase())) {
+                          return user
+                        }
+                      })
+                      .map((user, index) => (
+                        <Card key={index} user={user} bannerColor={user.banner_color} name={user.name} username={user.username} github={user.github} about={user.about} />
+                      ))
+                    }
 
                   </div>
                 </div>
