@@ -22,4 +22,3 @@ jobs:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           issue-message: '@${{ github.actor }} Welcome to the community :nerd_face: :rocket: Your issue is like a spark that ignites innovation. We're thrilled to dive into it and work together to find a solution. [Join Discord](https://discord.gg/vUHMxPvege) '
           pr-message: 'Great job, @${{ github.actor }}! 🎉 Thank you for opening a pull request. Your contribution is valuable and we appreciate your efforts to improve our project :nerd_face: [Join Discord](https://discord.gg/vUHMxPvege) '
-          footer: 'Soon the maintainers/owner will review it and provide you with feedback/suggestions.'
