@@ -72,6 +72,9 @@ Check out the website: [𝕏 Profiles](https://x.hellofaizan.me)
 To run locally, just `cd` into the project and run the following commands to run node modules and serve the website locally.
 ```bash
 yarn
+```
+
+```bash
 yarn run dev
 ```
 
