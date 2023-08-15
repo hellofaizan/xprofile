@@ -39,23 +39,11 @@ Check out the website: [𝕏 Profiles](https://x.hellofaizan.me)
 
 ## 🛠️ Installation Steps
 
-- [Fork](https://github.com/hellofaizan/xprofile/fork) the project. Click on the <a href="https://github.com/hellofaizan/xprofile/fork"><img src="https://i.imgur.com/G4z1kEe.png" height="15" width="15"></a> icon in the top right to get started.
-
-- Use this commands in your git bash to make a clone of the project in your pc.
-
-### SSH [Github Docs](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
-
-```bash
-$ git clone git@github.com:username/xprofile
-```
-
-- Navigate to the project directory.
-
-## 🔥 Add your profile
+### 🔥 Add your profile using
 
 1. Fork the project:
 
-- Click the gray `Fork` button in the top right of this page. This creates _your_ copy of the project and saves it as a new repository in your github account
+- [Fork](https://github.com/hellofaizan/xprofile/fork) the project. Click on the <a href="https://github.com/hellofaizan/xprofile/fork"><img src="https://i.imgur.com/G4z1kEe.png" height="15" width="15"></a> icon in the top right to get started.
 
 2. Create a New Branch:
 
