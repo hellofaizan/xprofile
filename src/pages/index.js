@@ -9,48 +9,22 @@ import Card from '../components/Card'
 const Home = () => {
   const [search, setSearch] = useState(false)
   const [data, setData] = useState()
-  const [allData, setAllData] = useState()
-  const [count, setCount] = useState(9)
-  const [allCount, setAllCount] = useState(0)
 
   useEffect(() => {
     fetchAllUsers()
-    fetch12Users()
   }, []);
 
   const fetchAllUsers = async () => {
     try {
       const response = await fetch(`/api/explore`);
       const apiData = await response.json();
-      setAllData(apiData);
+      setData(apiData);
     } catch (error) {
       console.error("Error fetching all users:", error);
     }
   }
 
-  const fetch12Users = async () => {
-    try {
-      const response = await fetch(`/api/users?count=${count}`);
-      const apiData = await response.json();
-      setAllCount(apiData.length)
-      setData(apiData);
-    } catch (error) {
-      console.error("Error fetching first 9 users:", error);
-    }
-  };
-
-  const fetchMoreData = async () => {
-    try {
-      const response2 = await fetch(`/api/users?count=${count + 3}`);
-      setCount(count + 3)
-      const apiData2 = await response2.json();
-      setData(apiData2);
-    } catch (error) {
-      console.error("Error fetching more users:", error);
-    }
-  }
-
-  if (data && allData) {
+  if (data) {
     return (
       <>
         <motion.div
@@ -108,54 +82,24 @@ const Home = () => {
           </header>
 
           <div className='pb-5'>
-
-            <InfiniteScroll
-              dataLength={data.length} //This is important field to render the next data
-              next={fetchMoreData}
-              hasMore={allCount === data.length}
-              
-              endMessage={
-                <div className='w-full justify-center inline-flex items-baseline'>
-                  <p>That&apos;s It! </p>
-                  <Link className='ml-2 text-blue-500' href={"https://github.com/hellofaizan/xprofile"}>Add your profile</Link>
-                  <Image width={13} height={13} alt="Fork Logo" src={"https://i.imgur.com/G4z1kEe.png"}></Image>
-                </div>
-              }>
-              <div className='flex flex-col mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8'>
-                <div className="grid grid-cols-1 gap-4 py-4 ">
-                  <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-
-                    {data
+            <div className='flex flex-col mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8'>
+              <div className="grid grid-cols-1 gap-4 py-4 ">
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                  {data
                     .filter((user) => {
                       if (search == "") {
                         return user
-                      } else {
-                        return null
+                      } else if (user.name.toLowerCase().includes(search.toLowerCase()) || user.username.toLowerCase().includes(search.toLowerCase())) {
+                        return user
                       }
                     })
-                      // .sort(() => Math.random() - 0.5)
-                      .map((user, index) => (
-                        <Card key={index} user={user} bannerColor={user.banner_color} name={user.name} username={user.username} github={user.github} about={user.about} />
-                      ))}
-
-                    {allData
-                      .filter((user) => {
-                        if (search == "") {
-                          return null
-                        } else if (user.name.toLowerCase().includes(search.toLowerCase()) || user.username.toLowerCase().includes(search.toLowerCase())) {
-                          return user
-                        }
-                      })
-                      .map((user, index) => (
-                        <Card key={index} user={user} bannerColor={user.banner_color} name={user.name} username={user.username} github={user.github} about={user.about} />
-                      ))
-                    }
-
-                  </div>
+                    // .sort(() => Math.random() - 0.5)
+                    .map((user, index) => (
+                      <Card key={index} user={user} bannerColor={user.banner_color} name={user.name} username={user.username} github={user.github} about={user.about} />
+                    ))}
                 </div>
               </div>
-            </InfiniteScroll>
-
+            </div>
           </div>
 
         </motion.div>

@@ -9,9 +9,11 @@ export default function handler(req, res) {
     
     if (req.query.count) {
         randomUserSubset = shuffledUsers.slice(0, parseInt(req.query.count));
-        // users = users.slice(0, )
+        res.status(200).json(randomUserSubset)
+      } else {
+        res.status(200).json(shuffledUsers)
       }
-    res.status(200).json(randomUserSubset)
+    
 }
 
 function shuffleArray(array) {
