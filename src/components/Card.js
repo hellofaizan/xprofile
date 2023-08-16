@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ThemeContext from "@/ThemeContext";
 
-const card = (props) => {
+const Card = (props) => {
   const about = props.about;
   const aboutLink = about.includes("http");
   const { theme } = useContext(ThemeContext);
@@ -104,4 +104,4 @@ const card = (props) => {
   );
 };
 
-export default card;
+export default Card;
