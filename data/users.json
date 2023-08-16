@@ -89,5 +89,12 @@
         "github": "rupeshprabhu",
         "banner_color": "#00dbda",
         "about": "Rupesh Prabhu | Frontend Developer currently in India | Loves to review and understand technology"
+    },
+    {
+        "username": "GurnavChaudhary",
+        "name": "Gurnav chaudhary",
+        "github": "Gurnav224",
+        "banner_color": "#00dbda",
+        "about": "I'm an aspiring full-stack MERN developer from India, currently in my final year of BCA studies"
     }
 ]
