@@ -11,12 +11,24 @@ import { NextUIProvider, createTheme } from "@nextui-org/react";
 const Home = () => {
   const [search, setSearch] = useState(false);
   const [data, setData] = useState();
-  const { toggleTheme, theme } = useContext(ThemeContext);
+  const { toggleTheme, theme, setTheme } = useContext(ThemeContext);
+  const [uiTheme, setUiTheme] = useState("");
+  useEffect(() => {
+    if (theme != "") {
+      localStorage.setItem("theme", theme);
+    }
+    setTheme(localStorage.getItem("theme"));
+  }, [theme]);
   useEffect(() => {
     fetchAllUsers();
   }, []);
 
-  const UItheme = createTheme({ type: theme });
+  useEffect(() => {
+    let UItheme = createTheme({ type: localStorage.getItem("theme") });
+    setUiTheme(UItheme);
+  }, [theme]);
+
+  console.log({ theme });
 
   const fetchAllUsers = async () => {
     try {
@@ -27,12 +39,11 @@ const Home = () => {
       console.error("Error fetching all users:", error);
     }
   };
-  console.log({ theme });
 
   if (data) {
     return (
       <>
-        <NextUIProvider theme={UItheme}>
+        <NextUIProvider theme={uiTheme}>
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -45,14 +56,13 @@ const Home = () => {
                     <div className="block">
                       <span className="sr-only">Home</span>
                       <Image
-                        src="/x_large.png"
+                        src={
+                          theme == "dark" ? "/x_large.png" : "/x_logo_dark.png"
+                        }
                         alt="Logo"
                         width={40}
                         height={40}
                         priority
-                        className={`${
-                          theme == "light" && "bg-black w-12 p-2 rounded-md"
-                        }`}
                       />
                     </div>
                   </div>
@@ -80,12 +90,16 @@ const Home = () => {
                   </div>
 
                   <div className="flex items-center gap-4">
-                    <div className="sm:flex items-center hidden sm:gap-2">
+                    <div className="sm:flex items-center sm:gap-2">
                       <button
                         onClick={toggleTheme}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="rounded-md bg-[#0e0e0e] border border-gray-600 px-3 py-1.5 text-xl font-medium hover:bg-gray-600 text-white shadow"
+                        className={`rounded-md bg-[#0e0e0e] ${
+                          theme == "dark"
+                            ? "text-white hover:bg-gray-600"
+                            : "bg-white border-2 hover:bg-gray-300 border-gray-700  text-black"
+                        } border border-gray-600 px-5 py-2.5 text-sm font-medium  shadow`}
                       >
                         {theme == "dark" ? (
                           <i className="bi bi-moon-fill"></i>
@@ -97,7 +111,11 @@ const Home = () => {
                         href={"https://x.com/hellofaizaan"}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="rounded-md bg-[#0e0e0e] border border-gray-600 px-3 py-1.5 text-xl font-medium hover:bg-gray-600 text-white shadow"
+                        className={`rounded-md bg-[#0e0e0e] ${
+                          theme == "dark"
+                            ? "text-white hover:bg-gray-600"
+                            : "bg-white border-2 hover:bg-gray-300 border-gray-700  text-black"
+                        } border hidden sm:block border-gray-600 px-5 py-2.5 text-sm font-medium shadow`}
                       >
                         𝕏
                       </Link>
@@ -105,7 +123,11 @@ const Home = () => {
                         href={"https://github.com/hellofaizan"}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="rounded-md bg-[#0e0e0e] border border-gray-600 px-2.5 py-1.5 text-xl font-medium hover:bg-gray-600 text-white shadow"
+                        className={`rounded-md bg-[#0e0e0e] ${
+                          theme == "dark"
+                            ? "text-white hover:bg-gray-600"
+                            : "bg-white border-2 hover:bg-gray-300 border-gray-700  text-black"
+                        } border hidden sm:block border-gray-600 px-5 py-2.5 text-sm font-medium shadow`}
                       >
                         <i className="bi bi-github"></i>
                       </Link>
@@ -113,12 +135,20 @@ const Home = () => {
                         href={"https://discord.com/invite/vUHMxPvege"}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="rounded-md bg-[#0e0e0e] border border-gray-600 px-2.5 py-1.5 text-xl font-medium hover:bg-gray-600 text-white shadow"
+                        className={`rounded-md bg-[#0e0e0e] ${
+                          theme == "dark"
+                            ? "text-white hover:bg-gray-600"
+                            : "bg-white border-2 hover:bg-gray-300 border-gray-700  text-black"
+                        } border hidden sm:block border-gray-600 px-5 py-2.5 text-sm font-medium  shadow`}
                       >
                         <i className="bi bi-discord"></i>
                       </Link>
                       <Link
-                        className="rounded-md bg-[#0e0e0e] border border-gray-600 px-5 py-2.5 text-sm font-medium hover:bg-gray-600 text-white shadow"
+                        className={`rounded-md bg-[#0e0e0e] ${
+                          theme == "dark"
+                            ? "text-white hover:bg-gray-600"
+                            : "bg-white border-2 hover:bg-gray-300 border-gray-700  text-black"
+                        } border border-gray-600 hidden  sm:block px-5 py-2.5 text-sm font-medium shadow`}
                         href="https://github.com/hellofaizan/xprofile"
                         target="_blank"
                         rel="noopener noreferrer"

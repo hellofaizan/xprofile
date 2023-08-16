@@ -39,9 +39,9 @@ const Card = (props) => {
                 alt={props.name}
                 width={95}
                 height={95}
-                className={`rounded-full ml-2 md:ml-4 -mt-8 border-4 border-black ${
-                  theme == "dark" ? "text-gray-300" : "text-white"
-                }`}
+                className={`rounded-full ml-2 md:ml-4 -mt-8 border-4 ${
+                  theme == "dark" && "border-black"
+                } ${theme == "dark" ? "text-gray-300" : "text-white"}`}
               />
               <div className="flex items-baseline gap-1">
                 <p className="mt-2 font-bold text-lg md:text-xl">
@@ -84,7 +84,11 @@ const Card = (props) => {
                 href={"https://github.com/" + props.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 text-sm font-medium text-white bg-gray-700 rounded hover:bg-gray-600 focus:outline-none focus:ring"
+                className={`px-4 py-2 text-sm font-medium ${
+                  theme == "dark"
+                    ? "bg-gray-700 text-white hover:bg-gray-600"
+                    : "bg-white border-2 border-gray-700  text-black"
+                } rounded focus:outline-none focus:ring`}
               >
                 Follow on <i className="bi bi-github"></i>
               </Link>
@@ -92,7 +96,11 @@ const Card = (props) => {
                 href={"https://x.com/" + props.username}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 text-sm font-medium text-white bg-gray-700 rounded hover:bg-gray-600 focus:outline-none focus:ring"
+                className={`px-4 py-2 text-sm font-medium ${
+                  theme == "dark"
+                    ? "bg-gray-700 text-white hover:bg-gray-600"
+                    : "bg-white border-2 border-gray-700  text-black"
+                } rounded focus:outline-none focus:ring`}
               >
                 Follow on 𝕏
               </Link>
