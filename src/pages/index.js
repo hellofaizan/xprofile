@@ -14,21 +14,30 @@ const Home = () => {
   const { toggleTheme, theme, setTheme } = useContext(ThemeContext);
   const [uiTheme, setUiTheme] = useState("");
   useEffect(() => {
-    if (theme != "") {
-      localStorage.setItem("theme", theme);
+    if (!theme && localStorage.getItem("theme")) {
+      setTheme(localStorage.getItem("theme"));
+    } else if (!localStorage.getItem("theme")) {
+      setTheme("dark");
+    } else {
+      setUiTheme(theme);
     }
-    setTheme(localStorage.getItem("theme"));
+    console.log({ theme });
+    localStorage.setItem("theme", theme);
   }, [theme]);
   useEffect(() => {
     fetchAllUsers();
   }, []);
 
   useEffect(() => {
-    let UItheme = createTheme({ type: localStorage.getItem("theme") });
-    setUiTheme(UItheme);
+    if (localStorage.getItem("theme")) {
+      setTheme(localStorage.getItem("theme"));
+      let UItheme = createTheme({ type: localStorage.getItem("theme") });
+      setUiTheme(UItheme);
+    } else {
+      let UItheme = createTheme({ type: "dark" });
+      setUiTheme(UItheme);
+    }
   }, [theme]);
-
-  console.log({ theme });
 
   const fetchAllUsers = async () => {
     try {
