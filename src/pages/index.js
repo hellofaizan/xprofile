@@ -98,7 +98,7 @@ const Home = () => {
                     </form>
                   </div>
 
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-1 sm:gap-4">
                     <div className="sm:flex items-center sm:gap-2">
                       <button
                         onClick={toggleTheme}
@@ -108,7 +108,7 @@ const Home = () => {
                           theme == "dark"
                             ? "text-white hover:bg-gray-600"
                             : "bg-white border-2 hover:bg-gray-300 border-gray-700  text-black"
-                        } border border-gray-600 px-5 py-2.5 text-sm font-medium  shadow`}
+                        } border border-gray-600 px-3 py-2.5 text-sm font-medium  shadow`}
                       >
                         {theme == "dark" ? (
                           <i className="bi bi-moon-fill"></i>
