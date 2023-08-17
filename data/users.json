@@ -96,5 +96,12 @@
         "github": "Gurnav224",
         "banner_color": "#00dbda",
         "about": "I'm an aspiring full-stack MERN developer from India, currently in my final year of BCA studies"
+    },
+    {
+        "username": "salman_codes",
+        "name": "Salman Akhtar",
+        "github": "salmanakhtar57",
+        "banner_color": "#00dbda",
+        "about": "Web Developer | Machine Learning Enthusiast | Tech Writer"
     }
 ]
