@@ -3,11 +3,10 @@ import Head from "next/head";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import Script from "next/script";
 // 1. import `NextUIProvider` component
-import { NextUIProvider, createTheme } from "@nextui-org/react";
 import { Analytics } from "@vercel/analytics/react";
+import ThemeProvider from "@/ThemeProvider";
 
 // 2. create a custom theme
-const darkTheme = createTheme({ type: "dark" });
 
 export default function App({ Component, pageProps }) {
   return (
@@ -66,8 +65,7 @@ export default function App({ Component, pageProps }) {
         />
       </Head>
 
-      <NextUIProvider theme={darkTheme}>
-
+      <ThemeProvider>
         <Script
           strategy="afterInteractive"
           async
@@ -83,10 +81,9 @@ export default function App({ Component, pageProps }) {
              gtag('config', 'G-GV02M4EWW9');
           `}
         </Script>
-
         <Component {...pageProps} />
         <Analytics />
-      </NextUIProvider>
+      </ThemeProvider>
     </>
   );
 }
