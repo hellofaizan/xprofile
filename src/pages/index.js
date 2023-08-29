@@ -86,7 +86,7 @@ const Home = () => {
                         type="text"
                         onChange={(e) => setSearch(e.target.value)}
                         id="simple-search"
-                        className={`border border-gray text-sm rounded-lg block w-full pl-3 p-2.5  ${theme == "light" ? "bg-white" : "bg-[#0e0e0e]"
+                        className={`border border-gray text-sm rounded-lg block shadow w-full pl-3 p-2.5  ${theme == "light" ? "bg-white" : "bg-[#0e0e0e]"
                           }  border-gray-600 placeholder-gray-400 ${theme == "dark" ? "text-white" : "text-black"
                           } focus:ring-blue-500 focus:border-blue-500`}
                         placeholder="Search by Name or Username..."

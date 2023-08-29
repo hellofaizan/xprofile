@@ -21,7 +21,7 @@ const Card = (props) => {
   return (
     <>
       {/* design a card using tailwind css good ui */}
-      <div className=" w-full h-auto overflow-hidden border border-gray-700 hover:border-gray-600 hover:scale-[1.006] rounded-xl">
+      <div className=" w-full shadow h-auto overflow-hidden border border-gray-700 hover:border-gray-600 hover:scale-[1.006] rounded-xl">
         <div
           className={`${theme == "dark" ? "bg-[#080808]" : "bg-white"
             } rounded-lg shadow-lg`}
