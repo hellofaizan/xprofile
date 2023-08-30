@@ -39,23 +39,11 @@ Check out the website: [𝕏 Profiles](https://x.hellofaizan.me)
 
 ## 🛠️ Installation Steps
 
-- [Fork](https://github.com/hellofaizan/xprofile/fork) the project. Click on the <a href="https://github.com/hellofaizan/xprofile/fork"><img src="https://i.imgur.com/G4z1kEe.png" height="15" width="15"></a> icon in the top right to get started.
-
-- Use this commands in your git bash to make a clone of the project in your pc.
-
-### SSH [Github Docs](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
-
-```bash
-$ git clone git@github.com:username/xprofile
-```
-
-- Navigate to the project directory.
-
-## 🔥 Add your profile
+### 🔥 Add your profile using
 
 1. Fork the project:
 
-- Click the gray `Fork` button in the top right of this page. This creates _your_ copy of the project and saves it as a new repository in your github account
+- [Fork](https://github.com/hellofaizan/xprofile/fork) the project. Click on the <a href="https://github.com/hellofaizan/xprofile/fork"><img src="https://i.imgur.com/G4z1kEe.png" height="15" width="15"></a> icon in the top right to get started.
 
 2. Create a New Branch:
 
@@ -77,13 +65,16 @@ $ git clone git@github.com:username/xprofile
 
 - And finally create a [Pull Request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)!
 - Great job! You did it!
-- Remember to PR in ```dev branch of repository```
+- Remember to PR in ```addProfile branch of repository```
 
 
 ## 🚀 Running locally
 To run locally, just `cd` into the project and run the following commands to run node modules and serve the website locally.
 ```bash
 yarn
+```
+
+```bash
 yarn run dev
 ```
 
@@ -98,6 +89,17 @@ Thank you so much all for spending your time to improve 𝕏 Profile.
 ## Repository Activity
 
 ![Alt](https://repobeats.axiom.co/api/embed/3c905c2b26fc447eb080acba085a899468acd7e3.svg "Repobeats analytics image")
+
+## Star History
+
+<a href="https://star-history.com/#hellofaizan/xprofile&Date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=hellofaizan/xprofile&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=hellofaizan/xprofile&type=Date" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=hellofaizan/xprofile&type=Date" />
+  </picture>
+</a>
+
 
 # Join Discord 💻
 

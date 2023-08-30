@@ -1,4 +1,5 @@
 [
+
     {
         "username": "hellofaizaan",
         "name": "Hello Faizan",
@@ -12,7 +13,7 @@
         "github": "cdxgh",
         "banner_color": "#ff2501",
         "about": " Coding☕ cricket Tech🧑‍💻.Innovative Developer & Entrepreneur shaping impactful tech solutions for a better future.
-		    Find me => https://abdulquadir-portfolio-website.netlify.app/"
+		    "Find me => https://abdulquadir-portfolio-website.netlify.app/"
     },
     {
         "username": "iaminfinil",
@@ -77,4 +78,118 @@
         "banner_color": "#ff1493",
         "about": "Mannu | 16yo from India currenty working in cyber security | Chess, Anime, Coffee | Cats 🐈‍⬛ | Community Manager (Moderator at DEV communtiy)"
     }
+]
+=======
+  {
+    "username": "Brandon4Tenn",
+    "name": "Brandon Thomas",
+    "github": "BThomas22tech",
+    "banner_color": "#0085ca",
+    "about": "Full-Stack Python Developer who loves to play the piano🎶 "
+  },
+  {
+    "username": "hellofaizaan",
+    "name": "Hello Faizan",
+    "github": "hellofaizan",
+    "banner_color": "#ff2500",
+    "about": "Chess♟ Coding☕ Football⚽ Tech🧑‍💻 <> I do random stuff just to make other person laugh. Find me => https://hellofaizan.me/"
+  },
+  {
+    "username": "zainab_nisa_",
+    "name": "Zainab Nisa",
+    "github": "ZainabNisa786",
+    "banner_color": "#f5f5f5",
+    "about": "I'm زينب | • learning Code • ui/ux-design"
+  },
+  {
+    "username": "iaminfinil",
+    "name": "Infinil",
+    "github": "infinil",
+    "banner_color": "#800080",
+    "about": "Built Animenetic & SpaceVoid • Solo Developer 👨🏻‍💻 • Anime Otaku 📺 • Space Enthusiast 🚀 •  CSE Student 👨🏻‍🎓"
+  },
+  {
+    "username": "nindri_mott",
+    "name": "Ikhlaq Malik",
+    "github": "ikhlaqmalik13",
+    "banner_color": "#000080",
+    "about": "1+1=10, 19: 48 | Koshur | Software Developer | CSE AMU | Lost in code, electronics, machines, graphs."
+  },
+  {
+    "username": "Neutron975",
+    "name": "Shiva",
+    "github": "Shiva953",
+    "banner_color": "#3b41ff",
+    "about": "Paradoxically Naive Rational Optimist | Likes Technology,Open Source and Exploring Finance | Loves Podcasts, Books and Memes"
+  },
+  {
+    "username": "bhavaygarg",
+    "name": "Bhavay Garg",
+    "github": "0takugod",
+    "banner_color": "#48D1CC",
+    "about": "CSE + Games + Anime + Open source = Me. | I love coffee. "
+  },
+  {
+    "username": "farfa7886",
+    "name": "Farfa",
+    "github": "Farfa7886",
+    "banner_color": "#09458f",
+    "about": "15 y/o kid from Italy that has a passion for programming"
+  },
+  {
+    "username": "Sxamoecode",
+    "name": "Samuel",
+    "github": "Sxamoecode",
+    "banner_color": "#86098f",
+    "about": "Software engineer | Backend development | Problem Solver | Loves contributing to Open Source && Collaborating"
+  },
+  {
+    "username": "okkattiboy",
+    "name": "Akshara Hegde",
+    "github": "aksharahegde",
+    "banner_color": "#00dbda",
+    "about": "Senior Fullstack Engineer | Writer | Visit aksharahegde.xyz"
+  },
+  {
+    "username": "BacotMath",
+    "name": "Bang Domath",
+    "github": "DomathID",
+    "banner_color": "#008080",
+    "about": "I I'am just an NPC | Anime Enthusiast | Write yukinoshita.web.id"
+  },
+  {
+    "username": "dev_mannuu",
+    "name": "Mannu",
+    "github": "MannuVilasara",
+    "banner_color": "#ff1493",
+    "about": "Mannu | 16yo from India currenty working in cyber security | Chess, Anime, Coffee | Cats 🐈‍⬛ | Community Manager (Moderator at DEV communtiy)"
+  },
+  {
+    "username": "prabhurupe",
+    "name": "Rupesh Prabhu",
+    "github": "rupeshprabhu",
+    "banner_color": "#00dbda",
+    "about": "Rupesh Prabhu | Frontend Developer currently in India | Loves to review and understand technology"
+  },
+  {
+    "username": "GurnavChaudhary",
+    "name": "Gurnav chaudhary",
+    "github": "Gurnav224",
+    "banner_color": "#00dbda",
+    "about": "I'm an aspiring full-stack MERN developer from India, currently in my final year of BCA studies"
+  },
+  {
+    "username": "salman_codes",
+    "name": "Salman Akhtar",
+    "github": "salmanakhtar57",
+    "banner_color": "#00dbda",
+    "about": "Web Developer | Machine Learning Enthusiast | Tech Writer"
+  },
+  {
+    "username": "AsharMallick86",
+    "name": "Ashar Mallick",
+    "github": "AsharMallick",
+    "banner_color": "#d4d319",
+    "about": "I'm an aspiring full-stack MERN developer from Pakistan who converts coffee into code"
+  }
 ]
