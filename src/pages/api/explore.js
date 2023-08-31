@@ -3,11 +3,17 @@
 export default function handler(req, res) {
     // read users from a local JSON file
     let users = require('/data/users.json')
-    const numberOfRandomUsers = 12
+    // const numberOfRandomUsers = 12
     const shuffledUsers = shuffleArray(users);
-    const randomUserSubset = shuffledUsers.slice(0, numberOfRandomUsers);
-
-    res.status(200).json(randomUserSubset)
+    let randomUserSubset;
+    
+    if (req.query.count) {
+        randomUserSubset = shuffledUsers.slice(0, parseInt(req.query.count));
+        res.status(200).json(randomUserSubset)
+      } else {
+        res.status(200).json(shuffledUsers)
+      }
+    
 }
 
 function shuffleArray(array) {
