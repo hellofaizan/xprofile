@@ -19,13 +19,13 @@ Check out the website: [𝕏 Profiles](https://x.hellofaizan.me)
 
 ## 👇🏽 FIle Formate
 ```json
-    {
+    ,{
         "username": "hellofaizaan",
         "name": "Hello Faizan",
         "github": "hellofaizan",
         "banner_color": "#ff2500",
         "about": "I am a full stack developer and a competitive programmer. I love Chess♟️ also https://hellofaizan.me/"
-    },
+    }
 ```
 
 | Key  | Value                                                                                  |
