@@ -19,13 +19,13 @@ Check out the website: [𝕏 Profiles](https://x.hellofaizan.me)
 
 ## 👇🏽 FIle Formate
 ```json
-    {
+    ,{
         "username": "hellofaizaan",
         "name": "Hello Faizan",
         "github": "hellofaizan",
         "banner_color": "#ff2500",
         "about": "I am a full stack developer and a competitive programmer. I love Chess♟️ also https://hellofaizan.me/"
-    },
+    }
 ```
 
 | Key  | Value                                                                                  |
@@ -89,6 +89,17 @@ Thank you so much all for spending your time to improve 𝕏 Profile.
 ## Repository Activity
 
 ![Alt](https://repobeats.axiom.co/api/embed/3c905c2b26fc447eb080acba085a899468acd7e3.svg "Repobeats analytics image")
+
+## Star History
+
+<a href="https://star-history.com/#hellofaizan/xprofile&Date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=hellofaizan/xprofile&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=hellofaizan/xprofile&type=Date" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=hellofaizan/xprofile&type=Date" />
+  </picture>
+</a>
+
 
 # Join Discord 💻
 

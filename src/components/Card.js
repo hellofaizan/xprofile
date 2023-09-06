@@ -21,11 +21,10 @@ const Card = (props) => {
   return (
     <>
       {/* design a card using tailwind css good ui */}
-      <div className=" w-full h-auto overflow-hidden border border-gray-700 hover:border-gray-600 hover:scale-[1.006] rounded-xl">
+      <div className=" w-full shadow h-auto overflow-hidden border border-gray-700 hover:border-gray-600 hover:scale-[1.006] rounded-xl">
         <div
-          className={`${
-            theme == "dark" ? "bg-[#080808]" : "bg-white"
-          } rounded-lg shadow-lg`}
+          className={`${theme == "dark" ? "bg-[#080808]" : "bg-white"
+            } rounded-lg shadow-lg`}
         >
           <div className="flex flex-col">
             <div
@@ -39,9 +38,8 @@ const Card = (props) => {
                 alt={props.name}
                 width={95}
                 height={95}
-                className={`rounded-full ml-2 md:ml-4 -mt-8 border-4 ${
-                  theme == "dark" && "border-black"
-                } ${theme == "dark" ? "text-gray-300" : "text-white"}`}
+                className={`rounded-full ml-2 md:ml-4 -mt-8 border-4 ${theme == "dark" ? "border-black" : "border-white"
+                  } ${theme == "dark" ? "text-gray-300" : "text-white"}`}
               />
               <div className="flex items-baseline gap-1">
                 <p className="mt-2 font-bold text-lg md:text-xl">
@@ -51,9 +49,8 @@ const Card = (props) => {
                   href={"https://twitter.com/" + props.username}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`mt-2 font-mono italic ${
-                    theme == "dark" ? "text-gray-300" : "text-black"
-                  } text-sm hover:text-blue-400 cursor-pointer`}
+                  className={`mt-2 font-mono italic ${theme == "dark" ? "text-gray-300" : "text-black"
+                    } text-sm hover:text-blue-400 cursor-pointer`}
                 >
                   @{props.username}
                 </Link>
@@ -79,16 +76,15 @@ const Card = (props) => {
             )}
 
             {/* Follow on github and on twitter button 2 in column */}
-            <div className="flex flex-col gap-2 text-center md:flex-row justify-between mt-2 mb-4 mx-4 md:mx-5">
+            <div className="grid grid-cols-2 gap-2 md:gap-3 text-center justify-between mt-2 mb-4 mx-4 md:mx-5">
               <Link
                 href={"https://github.com/" + props.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`px-4 py-2 text-sm font-medium ${
-                  theme == "dark"
+                className={`col-span-1 py-2 text-sm font-medium ${theme == "dark"
                     ? "bg-gray-700 text-white hover:bg-gray-600"
-                    : "bg-white border-2 border-gray-700  text-black"
-                } rounded focus:outline-none focus:ring`}
+                    : "bg-white border border-gray-700  text-black  hover:bg-gray-200"
+                  } rounded focus:outline-none focus:ring`}
               >
                 Follow on <i className="bi bi-github"></i>
               </Link>
@@ -96,11 +92,10 @@ const Card = (props) => {
                 href={"https://x.com/" + props.username}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`px-4 py-2 text-sm font-medium ${
-                  theme == "dark"
+                className={`col-span-1 py-2 text-sm font-medium ${theme == "dark"
                     ? "bg-gray-700 text-white hover:bg-gray-600"
-                    : "bg-white border-2 border-gray-700  text-black"
-                } rounded focus:outline-none focus:ring`}
+                    : "bg-white border border-gray-700 text-black  hover:bg-gray-200"
+                  } rounded focus:outline-none focus:ring`}
               >
                 Follow on 𝕏
               </Link>
