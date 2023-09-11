@@ -17,7 +17,7 @@ A website to list your Twitter ( 𝕏 ) and Github profile to the world
 
 Check out the website: [𝕏 Profiles](https://x.hellofaizan.me)
 
-## 👇🏽 FIle Formate
+## 👇🏽 File Format
 ```json
     ,{
         "username": "hellofaizaan",
@@ -49,7 +49,7 @@ Check out the website: [𝕏 Profiles](https://x.hellofaizan.me)
 
 - On your new repository's page, click the gray `main` button in the upper left to reveal a dropdown menu.
 - Enter the name of your new branch in the text box. (Branch names usually make a reference to what is being changed. Example: `profileAdd`).
-- Click on `Create branch <new branch name>` and this will automatically take you to your new branch. You can make edits on the main branch, but this may cause issues down the line. Best practice is to create a new branch for each separate issue you work on. That way your `main` branch remains in sync with `xprofile` `main` branch.
+- Click on `Create branch <new branch name>` and this will automatically take you to your new branch. You can make edits on the main branch, but this may cause issues down the line. Best practice is to create a new branch for each separate issue you work on. That way, your `main` branch remains in sync with `xprofile` `main` branch.
 
 3. Navigate to file:
 
@@ -63,7 +63,7 @@ Check out the website: [𝕏 Profiles](https://x.hellofaizan.me)
 
 5. Raise a Pull Request:
 
-- And finally create a [Pull Request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)!
+- And finally, create a [Pull Request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)!
 - Great job! You did it!
 - Remember to PR in ```addProfile branch of repository```
 
@@ -80,7 +80,7 @@ yarn run dev
 
 ## 💪🏽 Contributors
 
-Thank you so much all for spending your time to improve 𝕏 Profile.
+Thank you all so much for spending your time to improve 𝕏 Profile.
 
 <a href="https://github.com/hellofaizan/xprofile/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=hellofaizan/xprofile" />
