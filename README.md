@@ -1,5 +1,9 @@
 # 𝕏 Profile Card
 
+> [!NOTE]
+> Working on version 2 with a lot of features. [Have a look by clicking here](https://github.com/Youth-Icon/xprofile)
+> also [join Discord](https://discord.gg/vUHMxPvege) to discuss upcoming features
+
 A website to list your Twitter ( 𝕏 ) and Github profile to the world
 
 
