@@ -7,12 +7,16 @@ import Card from "../components/Card";
 import LoadingCard from "../components/LoadingCard";
 import ThemeContext from "@/ThemeContext";
 import { NextUIProvider, createTheme } from "@nextui-org/react";
+import InfiniteScroll from "react-infinite-scroll-component";
+import Spinner from "@/components/Spinner";
 
 const Home = () => {
 	const [search, setSearch] = useState(false);
-	const [data, setData] = useState();
-	const { toggleTheme, theme, setTheme } = useContext(ThemeContext);
+	const [data, setData] = useState([]);
 	const [uiTheme, setUiTheme] = useState("");
+	const [allUsers, setAllUsers] = useState([]);
+	const { toggleTheme, theme, setTheme } = useContext(ThemeContext);
+
 	useEffect(() => {
 		if (!theme && localStorage.getItem("theme")) {
 			setTheme(localStorage.getItem("theme"));
@@ -22,11 +26,12 @@ const Home = () => {
 			setUiTheme(theme);
 		}
 		localStorage.setItem("theme", theme);
-	}, [theme]);
+	}, [theme, setTheme]);
 
 	useEffect(() => {
 		fetchAllUsers();
-	}, []);
+		fetchMoreData();
+	}, [setAllUsers]);
 
 	useEffect(() => {
 		if (localStorage.getItem("theme")) {
@@ -37,15 +42,30 @@ const Home = () => {
 			let UItheme = createTheme({ type: "dark" });
 			setUiTheme(UItheme);
 		}
-	}, [theme]);
+	}, [theme, setTheme]);
 
 	const fetchAllUsers = async () => {
 		try {
-			const response = await fetch(`/api/explore`);
+			const response = await fetch(`/api/explore?count=9`);
 			const apiData = await response.json();
-			setData(apiData);
+			const getAllUsers = await fetch(`/api/explore`);
+			const allUsers = await getAllUsers.json();
+			setAllUsers(allUsers);
+			return apiData;
 		} catch (error) {
 			console.error("Error fetching all users:", error);
+		}
+	};
+
+	const fetchMoreData = async () => {
+		try {
+			const response = await fetch(
+				`/api/explore?_start=${data.length}&count=9`
+			);
+			const apiData = await response.json();
+			setData((data) => [...data, ...apiData]);
+		} catch (error) {
+			console.error("Error while fetching more data", error);
 		}
 	};
 
@@ -199,45 +219,63 @@ const Home = () => {
 						</div>
 					</header>
 
-					<div className="pb-5">
-						<div className="flex flex-col mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-							<div className="grid grid-cols-1 gap-4 py-4 ">
-								<div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-									{data ? (
-										data
-											.filter((user) => {
-												if (search == "") {
-													return user;
-												} else if (
-													user.name
-														.toLowerCase()
-														.includes(search.toLowerCase()) ||
-													user.username
-														.toLowerCase()
-														.includes(search.toLowerCase())
-												) {
-													return user;
-												}
-											})
-											// .sort(() => Math.random() - 0.5)
-											.map((user, index) => (
-												<Card
-													key={index}
-													user={user}
-													bannerColor={user.banner_color}
-													name={user.name}
-													username={user.username}
-													github={user.github}
-													about={user.about}
-												/>
-											))
-									) : (
-										<LoadingCard number={6} />
-									)}
+					<InfiniteScroll
+						dataLength={data?.length}
+						next={fetchMoreData}
+						hasMore={allUsers?.length > data?.length ? true : false}
+						loader={<Spinner />}
+						endMessage={
+							<p
+								style={{
+									textAlign: "center",
+									padding: "15px",
+									fontWeight: "bold",
+								}}
+							>
+								No More User
+							</p>
+						}
+					>
+						<div className="pb-5">
+							<div className="flex flex-col mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+								<div className="grid grid-cols-1 gap-4 py-4 ">
+									<div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+										{data ? (
+											data
+												.filter((user) => {
+													if (search == "") {
+														return user;
+													} else if (
+														user.name
+															.toLowerCase()
+															.includes(search.toLowerCase()) ||
+														user.username
+															.toLowerCase()
+															.includes(search.toLowerCase())
+													) {
+														return user;
+													}
+												})
+												// .sort(() => Math.random() - 0.5)
+												.map((user, index) => (
+													<Card
+														key={index}
+														user={user}
+														bannerColor={user.banner_color}
+														name={user.name}
+														username={user.username}
+														github={user.github}
+														about={user.about}
+													/>
+												))
+										) : (
+											<LoadingCard number={6} />
+										)}
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
+					</InfiniteScroll>
 				</motion.div>
 			</NextUIProvider>
 		</>
