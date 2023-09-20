@@ -15,6 +15,7 @@ const Home = () => {
 	const [data, setData] = useState([]);
 	const [uiTheme, setUiTheme] = useState("");
 	const [allUsers, setAllUsers] = useState([]);
+	const [loading, setLoading] = useState(false);
 	const { toggleTheme, theme, setTheme } = useContext(ThemeContext);
 
 	useEffect(() => {
@@ -29,11 +30,6 @@ const Home = () => {
 	}, [theme, setTheme]);
 
 	useEffect(() => {
-		fetchAllUsers();
-		fetchMoreData();
-	}, [setAllUsers]);
-
-	useEffect(() => {
 		if (localStorage.getItem("theme")) {
 			setTheme(localStorage.getItem("theme"));
 			let UItheme = createTheme({ type: localStorage.getItem("theme") });
@@ -44,13 +40,20 @@ const Home = () => {
 		}
 	}, [theme, setTheme]);
 
+	useEffect(() => {
+		fetchAllUsers();
+		fetchMoreData();
+	}, []);
+
 	const fetchAllUsers = async () => {
 		try {
+			setLoading(true);
 			const response = await fetch(`/api/explore?count=9`);
 			const apiData = await response.json();
 			const getAllUsers = await fetch(`/api/explore`);
 			const allUsers = await getAllUsers.json();
 			setAllUsers(allUsers);
+			setLoading(false);
 			return apiData;
 		} catch (error) {
 			console.error("Error fetching all users:", error);
@@ -230,17 +233,20 @@ const Home = () => {
 									textAlign: "center",
 									padding: "15px",
 									fontWeight: "bold",
+									letterSpacing: "0.5px",
 								}}
 							>
-								No More User
+								You are end of list
 							</p>
 						}
 					>
-						<div className="pb-5">
+						<div className="pb-2">
 							<div className="flex flex-col mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
 								<div className="grid grid-cols-1 gap-4 py-4 ">
 									<div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-										{data ? (
+										{loading ? (
+											<LoadingCard number={9} />
+										) : (
 											data
 												.filter((user) => {
 													if (search == "") {
@@ -256,7 +262,6 @@ const Home = () => {
 														return user;
 													}
 												})
-												// .sort(() => Math.random() - 0.5)
 												.map((user, index) => (
 													<Card
 														key={index}
@@ -268,8 +273,6 @@ const Home = () => {
 														about={user.about}
 													/>
 												))
-										) : (
-											<LoadingCard number={6} />
 										)}
 									</div>
 								</div>
