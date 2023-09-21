@@ -42,7 +42,6 @@ const Home = () => {
 
 	useEffect(() => {
 		fetchAllUsers();
-		fetchMoreData();
 	}, []);
 
 	const fetchAllUsers = async () => {
@@ -54,7 +53,7 @@ const Home = () => {
 			const allUsers = await getAllUsers.json();
 			setAllUsers(allUsers);
 			setLoading(false);
-			return apiData;
+			setData(apiData);
 		} catch (error) {
 			console.error("Error fetching all users:", error);
 		}
@@ -224,7 +223,7 @@ const Home = () => {
 						</div>
 					</header>
 
-					<div>
+					<>
 						<InfiniteScroll
 							dataLength={data?.length}
 							next={fetchMoreData}
@@ -282,7 +281,7 @@ const Home = () => {
 								</div>
 							</div>
 						</InfiniteScroll>
-					</div>
+					</>
 				</motion.div>
 			</NextUIProvider>
 		</>
