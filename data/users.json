@@ -6,6 +6,7 @@
   "banner_color": "rgb(238, 255, 142)",
   "about": "Front-End Developer learning React👩‍💻| CS @IGDTUW 🏢 | Mentor at @GDSC |Anime🩵 |"
   },
+
   {
         "username": "heyhimansh",
         "name": "Himanshu Rathore",
@@ -196,6 +197,13 @@
 "github": "qryskalyst20",
 "banner_color": "#00FFFF",
 "about": "Next.js Dev"
-}
+} ,
+{
+  "username": "TammyAlok2",
+  "name": "Alok Tamrakar ",
+  "github": "https://github.com/TammyAlok2/",
+  "banner_color": "#ff2500",
+  "about": "I am a full stack developer and a competitive programmer. I love Chess♟️ also I am backend lead of Adsc"
+},
 ]
   
