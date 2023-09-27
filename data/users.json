@@ -229,5 +229,12 @@
     "github": "prince-63",
     "banner_color": "#abeb7a",
     "about": "I am a software developer and microsoft learn student ambassador"
-  }
+  },
+  {
+        "username": "ashu_rai_06",
+        "name": "Ashutosh Rai",
+        "github": "Ashutosh0602",
+        "banner_color": "#C2442D",
+        "about": "Full Stack Javascript | Python Developer"
+    }
 ]
