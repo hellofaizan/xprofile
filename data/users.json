@@ -1,168 +1,164 @@
-[  
+[
   {
-        "username": "_jinx_vi_",
-        "name": "Adarsh",
-        "github": "jinx-vi-0",
-        "banner_color": "#800080",
-        "about": "EAT - SLEEP - CODE - REPEAT"
-  },
-  
-  {
-  "username": "geekyAyushi",
-  "name": "Ayushi Choudhary",
-  "github": "ayushichoudhary-19",
-  "banner_color": "rgb(238, 255, 142)",
-  "about": "Front-End Developer learning React👩‍💻| CS @IGDTUW 🏢 | Mentor at @GDSC |Anime🩵 |"
-  },
-
-  {
-        "username": "heyhimansh",
-        "name": "Himanshu Rathore",
-        "github": "heyhimansh",
-        "banner_color": "#b1ff91",
-        "about": "CP | Navigating the Full-stack Universe 👀🚀"
-  },
-  
-  {
-  "username": "Adonijah_Kimut",
-  "name": "Adonijah Kiplimo",
-  "github": "adonijah01",
-  "banner_color": "#0085ca",
-  "about": "Full-Stack Developer who uses MERN Stack "
-  },
-  
-  {
-  "username": "Brandon4Tenn",
-  "name": "Brandon Thomas",
-  "github": "BThomas22tech",
-  "banner_color": "#0085ca",
-  "about": "Full-Stack Python Developer who loves to play the piano🎶 "
+    "username": "_jinx_vi_",
+    "name": "Adarsh",
+    "github": "jinx-vi-0",
+    "banner_color": "#800080",
+    "about": "EAT - SLEEP - CODE - REPEAT"
   },
   {
-  "username": "hellofaizaan",
-  "name": "Hello Faizan",
-  "github": "hellofaizan",
-  "banner_color": "#ff2500",
-  "about": "Chess♟ Coding☕ Football⚽ Tech🧑‍💻 <> I do random stuff just to make other person laugh. Find me => https://hellofaizan.me/"
+    "username": "geekyAyushi",
+    "name": "Ayushi Choudhary",
+    "github": "ayushichoudhary-19",
+    "banner_color": "rgb(238, 255, 142)",
+    "about": "Front-End Developer learning React👩‍💻| CS @IGDTUW 🏢 | Mentor at @GDSC |Anime🩵 |"
   },
   {
-  "username": "zainab_nisa_",
-  "name": "Zainab Nisa",
-  "github": "ZainabNisa786",
-  "banner_color": "#f5f5f5",
-  "about": "I'm زينب | • learning Code • ui/ux-design"
+    "username": "heyhimansh",
+    "name": "Himanshu Rathore",
+    "github": "heyhimansh",
+    "banner_color": "#b1ff91",
+    "about": "CP | Navigating the Full-stack Universe 👀🚀"
   },
   {
-  "username": "iaminfinil",
-  "name": "Infinil",
-  "github": "infinil",
-  "banner_color": "#800080",
-  "about": "Built Animenetic & SpaceVoid • Solo Developer 👨🏻‍💻 • Anime Otaku 📺 • Space Enthusiast 🚀 • CSE Student 👨🏻‍🎓"
+    "username": "Adonijah_Kimut",
+    "name": "Adonijah Kiplimo",
+    "github": "adonijah01",
+    "banner_color": "#0085ca",
+    "about": "Full-Stack Developer who uses MERN Stack "
   },
   {
-  "username": "nindri_mott",
-  "name": "Ikhlaq Malik",
-  "github": "ikhlaqmalik13",
-  "banner_color": "#000080",
-  "about": "1+1=10, 19: 48 | Koshur | Software Developer | CSE AMU | Lost in code, electronics, machines, graphs."
+    "username": "Brandon4Tenn",
+    "name": "Brandon Thomas",
+    "github": "BThomas22tech",
+    "banner_color": "#0085ca",
+    "about": "Full-Stack Python Developer who loves to play the piano🎶 "
   },
   {
-  "username": "Neutron975",
-  "name": "Shiva",
-  "github": "Shiva953",
-  "banner_color": "#3b41ff",
-  "about": "Paradoxically Naive Rational Optimist | Likes Technology,Open Source and Exploring Finance | Loves Podcasts, Books and Memes"
+    "username": "hellofaizaan",
+    "name": "Hello Faizan",
+    "github": "hellofaizan",
+    "banner_color": "#ff2500",
+    "about": "Chess♟ Coding☕ Football⚽ Tech🧑‍💻 <> I do random stuff just to make other person laugh. Find me => https://hellofaizan.me/"
   },
   {
-  "username": "bhavaygarg",
-  "name": "Bhavay Garg",
-  "github": "0takugod",
-  "banner_color": "#48D1CC",
-  "about": "CSE + Games + Anime + Open source = Me. | I love coffee. "
+    "username": "zainab_nisa_",
+    "name": "Zainab Nisa",
+    "github": "ZainabNisa786",
+    "banner_color": "#f5f5f5",
+    "about": "I'm زينب | • learning Code • ui/ux-design"
   },
   {
-  "username": "farfa7886",
-  "name": "Farfa",
-  "github": "Farfa7886",
-  "banner_color": "#09458f",
-  "about": "15 y/o kid from Italy that has a passion for programming"
+    "username": "iaminfinil",
+    "name": "Infinil",
+    "github": "infinil",
+    "banner_color": "#800080",
+    "about": "Built Animenetic & SpaceVoid • Solo Developer 👨🏻‍💻 • Anime Otaku 📺 • Space Enthusiast 🚀 • CSE Student 👨🏻‍🎓"
   },
   {
-  "username": "Sxamoecode",
-  "name": "Samuel",
-  "github": "Sxamoecode",
-  "banner_color": "#86098f",
-  "about": "Software engineer | Backend development | Problem Solver | Loves contributing to Open Source && Collaborating"
+    "username": "nindri_mott",
+    "name": "Ikhlaq Malik",
+    "github": "ikhlaqmalik13",
+    "banner_color": "#000080",
+    "about": "1+1=10, 19: 48 | Koshur | Software Developer | CSE AMU | Lost in code, electronics, machines, graphs."
   },
   {
-  "username": "okkattiboy",
-  "name": "Akshara Hegde",
-  "github": "aksharahegde",
-  "banner_color": "#00dbda",
-  "about": "Senior Fullstack Engineer | Writer | Visit aksharahegde.xyz"
+    "username": "Neutron975",
+    "name": "Shiva",
+    "github": "Shiva953",
+    "banner_color": "#3b41ff",
+    "about": "Paradoxically Naive Rational Optimist | Likes Technology,Open Source and Exploring Finance | Loves Podcasts, Books and Memes"
   },
   {
-  "username": "BacotMath",
-  "name": "Bang Domath",
-  "github": "DomathID",
-  "banner_color": "#008080",
-  "about": "I I'am just an NPC | Anime Enthusiast | Write yukinoshita.web.id"
+    "username": "bhavaygarg",
+    "name": "Bhavay Garg",
+    "github": "0takugod",
+    "banner_color": "#48D1CC",
+    "about": "CSE + Games + Anime + Open source = Me. | I love coffee. "
   },
   {
-  "username": "dev_mannuu",
-  "name": "Mannu",
-  "github": "MannuVilasara",
-  "banner_color": "#ff1493",
-  "about": "Mannu | 16yo from India currenty working in cyber security | Chess, Anime, Coffee | Cats 🐈‍⬛ | Community Manager (Moderator at DEV communtiy)"
+    "username": "farfa7886",
+    "name": "Farfa",
+    "github": "Farfa7886",
+    "banner_color": "#09458f",
+    "about": "15 y/o kid from Italy that has a passion for programming"
   },
   {
-  "username": "prabhurupe",
-  "name": "Rupesh Prabhu",
-  "github": "rupeshprabhu",
-  "banner_color": "#00dbda",
-  "about": "Rupesh Prabhu | Frontend Developer currently in India | Loves to review and understand technology"
+    "username": "Sxamoecode",
+    "name": "Samuel",
+    "github": "Sxamoecode",
+    "banner_color": "#86098f",
+    "about": "Software engineer | Backend development | Problem Solver | Loves contributing to Open Source && Collaborating"
   },
   {
-  "username": "GurnavChaudhary",
-  "name": "Gurnav chaudhary",
-  "github": "Gurnav224",
-  "banner_color": "#00dbda",
-  "about": "I'm an aspiring full-stack MERN developer from India, currently in my final year of BCA studies"
+    "username": "okkattiboy",
+    "name": "Akshara Hegde",
+    "github": "aksharahegde",
+    "banner_color": "#00dbda",
+    "about": "Senior Fullstack Engineer | Writer | Visit aksharahegde.xyz"
   },
   {
-  "username": "salman_codes",
-  "name": "Salman Akhtar",
-  "github": "salmanakhtar57",
-  "banner_color": "#00dbda",
-  "about": "Web Developer | Machine Learning Enthusiast | Tech Writer"
+    "username": "BacotMath",
+    "name": "Bang Domath",
+    "github": "DomathID",
+    "banner_color": "#008080",
+    "about": "I I'am just an NPC | Anime Enthusiast | Write yukinoshita.web.id"
   },
   {
-  "username": "AsharMallick86",
-  "name": "Ashar Mallick",
-  "github": "AsharMallick",
-  "banner_color": "#d4d319",
-  "about": "I'm an aspiring full-stack MERN developer from Pakistan who converts coffee into code"
+    "username": "dev_mannuu",
+    "name": "Mannu",
+    "github": "MannuVilasara",
+    "banner_color": "#ff1493",
+    "about": "Mannu | 16yo from India currenty working in cyber security | Chess, Anime, Coffee | Cats 🐈‍⬛ | Community Manager (Moderator at DEV communtiy)"
   },
   {
-  "username": "abdulqu87130365",
-  "name": "Abdul Quadir",
-  "github": "cdxgh",
-  "banner_color": "#ff2501",
-  "about": " Coding☕ cricket  Tech🧑‍💻. Innovative Developer & Entrepreneur shaping impactful tech solutions for a better future. https://abdulquadir-portfolio-website.netlify.app/"
+    "username": "prabhurupe",
+    "name": "Rupesh Prabhu",
+    "github": "rupeshprabhu",
+    "banner_color": "#00dbda",
+    "about": "Rupesh Prabhu | Frontend Developer currently in India | Loves to review and understand technology"
   },
   {
-  "username": "ibrahimSetup",
-  "name": "Ibrahim",
-  "github": "adebayoibrahim",
-  "banner_color": "#212121",
-  "about": " An ambitious web programmer. https://ibrahim-setup.netlify.app/"
+    "username": "GurnavChaudhary",
+    "name": "Gurnav chaudhary",
+    "github": "Gurnav224",
+    "banner_color": "#00dbda",
+    "about": "I'm an aspiring full-stack MERN developer from India, currently in my final year of BCA studies"
   },
   {
-  "username": "joeimproves",
-  "name": "Joe",
-  "github": "JoePelusoImproves",
-  "banner_color": "#e62d34",
-  "about": " An Optimistic Futurist Committed To Changing The World One Line of Code, One Perspective, and One Person At A Time! GT Industrial Eng. 2014 and GT Computer Science 2026 (in progress)"
+    "username": "salman_codes",
+    "name": "Salman Akhtar",
+    "github": "salmanakhtar57",
+    "banner_color": "#00dbda",
+    "about": "Web Developer | Machine Learning Enthusiast | Tech Writer"
+  },
+  {
+    "username": "AsharMallick86",
+    "name": "Ashar Mallick",
+    "github": "AsharMallick",
+    "banner_color": "#d4d319",
+    "about": "I'm an aspiring full-stack MERN developer from Pakistan who converts coffee into code"
+  },
+  {
+    "username": "abdulqu87130365",
+    "name": "Abdul Quadir",
+    "github": "cdxgh",
+    "banner_color": "#ff2501",
+    "about": " Coding☕ cricket  Tech🧑‍💻. Innovative Developer & Entrepreneur shaping impactful tech solutions for a better future. https://abdulquadir-portfolio-website.netlify.app/"
+  },
+  {
+    "username": "ibrahimSetup",
+    "name": "Ibrahim",
+    "github": "adebayoibrahim",
+    "banner_color": "#212121",
+    "about": " An ambitious web programmer. https://ibrahim-setup.netlify.app/"
+  },
+  {
+    "username": "joeimproves",
+    "name": "Joe",
+    "github": "JoePelusoImproves",
+    "banner_color": "#e62d34",
+    "about": " An Optimistic Futurist Committed To Changing The World One Line of Code, One Perspective, and One Person At A Time! GT Industrial Eng. 2014 and GT Computer Science 2026 (in progress)"
   },
   {
     "username": "Sarcas_tik",
@@ -193,39 +189,45 @@
     "about": "Undergraduate🦀 | Looking into the Front-end 👀🤺"
   },
   {
-"username": "sueii__",
-"name": "Folarin Raphael",
-"github": "darksuei",
-"banner_color": "#0579C3",
-"about": "Passionate FullStack Software developer. I love cats ✨"
-},
+    "username": "sueii__",
+    "name": "Folarin Raphael",
+    "github": "darksuei",
+    "banner_color": "#0579C3",
+    "about": "Passionate FullStack Software developer. I love cats ✨"
+  },
   {
-"username": "nrmnqdds",
-"name": "NURIMAN QUDDUS",
-"github": "qryskalyst20",
-"banner_color": "#00FFFF",
-"about": "Next.js Dev"
-} ,
-{
-  "username": "TammyAlok2",
-  "name": "Alok Tamrakar ",
-  "github": "TammyAlok2",
-  "banner_color": "#ff2500",
-  "about": "I am a full stack developer and a competitive programmer. I love Chess♟️ also I am backend lead of Adsc"
-},
-{
-  "username": "rancho2002",
-  "name": "Arijit Ghosh",
-  "github": "rancho2002",
-  "banner_color": "#0579C3",
-  "about": "I am a python programmer and a lamp stack developer"
-},
-{
-  "username": "Divya4879",
-  "name": "Divya",
-  "github": "Divya4879",
-  "banner_color": "#0579C3",
-  "about": "I am a python programmer , web developer and I am learning data analysis at the moment."
-}
+    "username": "nrmnqdds",
+    "name": "NURIMAN QUDDUS",
+    "github": "qryskalyst20",
+    "banner_color": "#00FFFF",
+    "about": "Next.js Dev"
+  },
+  {
+    "username": "TammyAlok2",
+    "name": "Alok Tamrakar ",
+    "github": "TammyAlok2",
+    "banner_color": "#ff2500",
+    "about": "I am a full stack developer and a competitive programmer. I love Chess♟️ also I am backend lead of Adsc"
+  },
+  {
+    "username": "rancho2002",
+    "name": "Arijit Ghosh",
+    "github": "rancho2002",
+    "banner_color": "#0579C3",
+    "about": "I am a python programmer and a lamp stack developer"
+  },
+  {
+    "username": "Divya4879",
+    "name": "Divya",
+    "github": "Divya4879",
+    "banner_color": "#0579C3",
+    "about": "I am a python programmer , web developer and I am learning data analysis at the moment."
+  },
+  {
+    "username": "princedncg",
+    "name": "Prince Kumar",
+    "github": "prince-63",
+    "banner_color": "#abeb7a",
+    "about": "I am a software developer and microsoft learn student ambassador"
+  }
 ]
-  
