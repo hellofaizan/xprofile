@@ -250,5 +250,12 @@
         "github": "Ashutosh0602",
         "banner_color": "#C2442D",
         "about": "Full Stack Javascript | Python Developer"
-    }
+    },
+  {
+      "username": "AnkurGattani",
+      "name": "Ankur Gattani",
+      "github": "AnkurGattani",
+      "banner_color": "#71c4cf",
+      "about": "Java Developer"
+  }
 ]
