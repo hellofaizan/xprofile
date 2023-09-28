@@ -7,12 +7,13 @@ export default function handler(req, res) {
     const shuffledUsers = shuffleArray(users);
     let randomUserSubset;
     
-    if (req.query.count) {
-        randomUserSubset = shuffledUsers.slice(0, parseInt(req.query.count));
-        res.status(200).json(randomUserSubset)
-      } else {
-        res.status(200).json(shuffledUsers)
-      }
+    if (req.query._start === "undefined") {
+    randomUserSubset = shuffledUsers.slice(0, req.query.count);
+    res.status(200).json(randomUserSubset);
+  } else {
+    randomUserSubset = shuffledUsers.slice(req.query._start, req.query.count);
+    res.status(200).json(randomUserSubset);
+  }
     
 }
 
