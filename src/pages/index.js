@@ -63,7 +63,7 @@ const Home = () => {
 		try {
 			setTimeout(async () => {
 				const response = await fetch(
-					`/api/explore?_start=${data.length}&count=9`
+					`/api/explore?_start=${data.length}&count=${data.length + 10}`
 				);
 				const apiData = await response.json();
 				setData((data) => [...data, ...apiData]);
