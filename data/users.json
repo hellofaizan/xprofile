@@ -1,4 +1,10 @@
-[
+[  {
+  "username": "sahdev04",
+ "name": "Sahdev Patel",
+ "github": "sahdev04",
+ "banner_color": "#2BEBF4",
+ "about": "Hello I am Sahdev student co-ordinator NAAC."
+},
   {
      "username": "avinash03082003",
     "name": "Avinash Agrawal",
