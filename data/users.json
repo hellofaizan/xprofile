@@ -1,10 +1,18 @@
-[  {
-  "username": "sahdev04",
- "name": "Sahdev Patel",
- "github": "sahdev04",
- "banner_color": "#2BEBF4",
- "about": "Hello I am Sahdev student co-ordinator NAAC."
-},
+[ 
+  {
+    "username": "Muskan_s2004",
+    "name": "Muskan Shukla",
+    "github": "Muskan0739",
+    "banner_color": "#ff2500",
+    "about": "I am a Java Developer"
+   },
+   {
+   "username": "sahdev04",
+  "name": "Sahdev Patel",
+  "github": "sahdev04",
+  "banner_color": "#2BEBF4",
+  "about": "Hello I am Sahdev student co-ordinator NAAC."
+  },
   {
      "username": "avinash03082003",
     "name": "Avinash Agrawal",
