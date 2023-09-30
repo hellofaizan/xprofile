@@ -40,33 +40,44 @@ const Home = () => {
 		}
 	}, [theme, setTheme]);
 
+
 	useEffect(() => {
+		const fetchAllUsers = async () => {
+			try {
+				setLoading(true);
+
+				const getAllUsers = await fetch(`/api/explore`);
+				const allUsers = await getAllUsers.json();
+
+				const shuffledUsers = shuffleUsers(allUsers);
+
+				setAllUsers(shuffledUsers);
+				setLoading(false);
+				setData(shuffledUsers.slice(0, 9));
+			} catch (error) {
+				console.error("Error fetching all users:", error);
+			}
+		};
+
 		fetchAllUsers();
 	}, []);
 
-	const fetchAllUsers = async () => {
-		try {
-			setLoading(true);
-			const response = await fetch(`/api/explore?count=9`);
-			const apiData = await response.json();
-			const getAllUsers = await fetch(`/api/explore`);
-			const allUsers = await getAllUsers.json();
-			setAllUsers(allUsers);
-			setLoading(false);
-			setData(apiData);
-		} catch (error) {
-			console.error("Error fetching all users:", error);
+	function shuffleUsers(array) {
+		// Fisher-Yates (aka Knuth) Shuffle
+		const shuffledArray = [...array];
+		for (let i = shuffledArray.length - 1; i > 0; i--) {
+			const j = Math.floor(Math.random() * (i + 1));
+			[shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
 		}
-	};
+		return shuffledArray;
+	}
+
 
 	const fetchMoreData = () => {
 		try {
-			setTimeout(async () => {
-				const response = await fetch(
-					`/api/explore?_start=${data.length}&count=${data.length + 10}`
-				);
-				const apiData = await response.json();
-				setData((data) => [...data, ...apiData]);
+			setTimeout(() => {
+				const newData = allUsers.slice(data.length, data.length + 9);
+				setData((data) => [...data, ...newData]);
 			}, 500);
 		} catch (error) {
 			console.error("Error while fetching more data", error);
@@ -108,11 +119,9 @@ const Home = () => {
 												type="text"
 												onChange={(e) => setSearch(e.target.value)}
 												id="simple-search"
-												className={`border border-gray text-sm rounded-lg block shadow w-full pl-3 p-2.5  ${
-													theme == "light" ? "bg-white" : "bg-[#0e0e0e]"
-												}  border-gray-600 placeholder-gray-400 ${
-													theme == "dark" ? "text-white" : "text-black"
-												} focus:ring-blue-500 focus:border-blue-500`}
+												className={`border border-gray text-sm rounded-lg block shadow w-full pl-3 p-2.5  ${theme == "light" ? "bg-white" : "bg-[#0e0e0e]"
+													}  border-gray-600 placeholder-gray-400 ${theme == "dark" ? "text-white" : "text-black"
+													} focus:ring-blue-500 focus:border-blue-500`}
 												placeholder="Search by Name or Username..."
 												required
 											></input>
@@ -125,11 +134,10 @@ const Home = () => {
 											onClick={toggleTheme}
 											target="_blank"
 											rel="noopener noreferrer"
-											className={`rounded-md bg-[#0e0e0e] ${
-												theme == "dark"
-													? "text-white hover:bg-gray-600"
-													: "bg-white hover:bg-gray-300 text-black"
-											} border border-gray-600 px-3 py-2.5 text-sm font-medium  shadow`}
+											className={`rounded-md bg-[#0e0e0e] ${theme == "dark"
+												? "text-white hover:bg-gray-600"
+												: "bg-white hover:bg-gray-300 text-black"
+												} border border-gray-600 px-3 py-2.5 text-sm font-medium  shadow`}
 										>
 											{theme == "dark" ? (
 												<i className="bi bi-moon-fill"></i>
@@ -141,11 +149,10 @@ const Home = () => {
 											href={"https://x.com/hellofaizaan"}
 											target="_blank"
 											rel="noopener noreferrer"
-											className={`rounded-md bg-[#0e0e0e] ${
-												theme == "dark"
-													? "text-white hover:bg-gray-600"
-													: "bg-white hover:bg-gray-300 text-black"
-											} border hidden sm:block border-gray-600 px-4 py-2.5 text-sm font-bold shadow`}
+											className={`rounded-md bg-[#0e0e0e] ${theme == "dark"
+												? "text-white hover:bg-gray-600"
+												: "bg-white hover:bg-gray-300 text-black"
+												} border hidden sm:block border-gray-600 px-4 py-2.5 text-sm font-bold shadow`}
 										>
 											𝕏
 										</Link>
@@ -153,11 +160,10 @@ const Home = () => {
 											href={"https://github.com/hellofaizan"}
 											target="_blank"
 											rel="noopener noreferrer"
-											className={`rounded-md bg-[#0e0e0e] ${
-												theme == "dark"
-													? "text-white hover:bg-gray-600"
-													: "bg-white hover:bg-gray-300 text-black"
-											} border hidden sm:block border-gray-600 px-4 py-2.5 text-sm font-medium shadow`}
+											className={`rounded-md bg-[#0e0e0e] ${theme == "dark"
+												? "text-white hover:bg-gray-600"
+												: "bg-white hover:bg-gray-300 text-black"
+												} border hidden sm:block border-gray-600 px-4 py-2.5 text-sm font-medium shadow`}
 										>
 											<i className="bi bi-github"></i>
 										</Link>
@@ -165,20 +171,18 @@ const Home = () => {
 											href={"https://discord.com/invite/vUHMxPvege"}
 											target="_blank"
 											rel="noopener noreferrer"
-											className={`rounded-md bg-[#0e0e0e] ${
-												theme == "dark"
-													? "text-white hover:bg-gray-600"
-													: "bg-white hover:bg-gray-300 text-black"
-											} border hidden sm:block border-gray-600 px-4 py-2.5 text-sm font-medium  shadow`}
+											className={`rounded-md bg-[#0e0e0e] ${theme == "dark"
+												? "text-white hover:bg-gray-600"
+												: "bg-white hover:bg-gray-300 text-black"
+												} border hidden sm:block border-gray-600 px-4 py-2.5 text-sm font-medium  shadow`}
 										>
 											<i className="bi bi-discord"></i>
 										</Link>
 										<Link
-											className={`rounded-md bg-[#0e0e0e] ${
-												theme == "dark"
-													? "text-white hover:bg-gray-600"
-													: "bg-white hover:bg-gray-300 text-black"
-											} border border-gray-600 hidden  sm:block px-4 py-2.5 text-sm font-medium shadow`}
+											className={`rounded-md bg-[#0e0e0e] ${theme == "dark"
+												? "text-white hover:bg-gray-600"
+												: "bg-white hover:bg-gray-300 text-black"
+												} border border-gray-600 hidden  sm:block px-4 py-2.5 text-sm font-medium shadow`}
 											href="https://github.com/hellofaizan/xprofile"
 											target="_blank"
 											rel="noopener noreferrer"
@@ -197,22 +201,19 @@ const Home = () => {
 													type="text"
 													onChange={(e) => setSearch(e.target.value)}
 													id="simple-search"
-													className={`border border-gray text-sm rounded-lg block w-full pl-3 p-2.5  ${
-														theme == "light" ? "bg-white" : "bg-[#0e0e0e]"
-													}  border-gray-600 placeholder-gray-400 ${
-														theme == "dark" ? "text-white" : "text-black"
-													} focus:ring-blue-500 shadow focus:border-blue-500`}
+													className={`border border-gray text-sm rounded-lg block w-full pl-3 p-2.5  ${theme == "light" ? "bg-white" : "bg-[#0e0e0e]"
+														}  border-gray-600 placeholder-gray-400 ${theme == "dark" ? "text-white" : "text-black"
+														} focus:ring-blue-500 shadow focus:border-blue-500`}
 													placeholder="Search user profile..."
 													required
 												></input>
 											</div>
 											<Link
 												href={"https://github.com/hellofaizan/xprofile"}
-												className={`rounded-md bg-[#0e0e0e] ${
-													theme == "dark"
-														? "text-white hover:bg-gray-600"
-														: "bg-white hover:bg-gray-300 text-black"
-												} border border-gray-600 px-3 ml-1 py-2.5 text-sm font-medium  shadow`}
+												className={`rounded-md bg-[#0e0e0e] ${theme == "dark"
+													? "text-white hover:bg-gray-600"
+													: "bg-white hover:bg-gray-300 text-black"
+													} border border-gray-600 px-3 ml-1 py-2.5 text-sm font-medium  shadow`}
 											>
 												⭐
 											</Link>
