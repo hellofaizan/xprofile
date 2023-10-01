@@ -5,7 +5,7 @@ export default function Skeleton({ number }) {
 	const { theme } = useContext(ThemeContext);
 	return Array(number)
 		.fill(0)
-		.map((index) => (
+		.map((_,index) => (
 			<div
 				key={index}
 				className=" w-full h-auto overflow-hidden border border-gray-700 hover:border-gray-600 hover:scale-[1.006] rounded-xl"
