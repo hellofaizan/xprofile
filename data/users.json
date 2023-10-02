@@ -1,37 +1,37 @@
-[  {
+[
+  {
     "username": "shafi_mohammad_",
     "name": "Shafi Mohammad",
     "github": "shafimohammad09",
     "banner_color": "#ff2500",
     "about": "I'm a MERN Full Stack Web Developer -->https://www.linkedin.com/in/shafi-mohammad9/"
   },
-    {
+  {
     "username": "aatifcs13",
     "name": "Aatif Arsalan",
     "github": "aatifcs13",
     "banner_color": "#ff2500",
     "about": "Cricket🏏 Coding☕ Boxing🥊 Tech🧑‍💻 <> I'm Web Dev Enthusiast. Find me => https://aatif-arsalan.netlify.app/"
   },
-  
   {
-  "username": "VimalDu88372352",
-  "name": "Vimal Dubey",
-  "github": "vimal-Dubey",
-  "banner_color": "#ff2500",
-  "about": "I am a Blockchain Developer developer"
- },
-{
-  "username": "gprs1022",
-  "name": "Pradeep Singh",
-  "github": "gprs1022",
-  "banner_color": "#ff2500",
-  "about": "I am a Mobile App developer"
- },
+    "username": "VimalDu88372352",
+    "name": "Vimal Dubey",
+    "github": "vimal-Dubey",
+    "banner_color": "#ff2500",
+    "about": "I am a Blockchain Developer developer"
+  },
+  {
+    "username": "gprs1022",
+    "name": "Pradeep Singh",
+    "github": "gprs1022",
+    "banner_color": "#ff2500",
+    "about": "I am a Mobile App developer"
+  },
   {
     "username": "Veersen_2001",
     "name": "Veerbahadur Sen",
     "github": "Veersen2001",
-    "banner_color":"#2BEBF4",
+    "banner_color": "#2BEBF4",
     "about": "I am a Full Stack Web Developer"
   },
   {
@@ -40,16 +40,16 @@
     "github": "Muskan0739",
     "banner_color": "#ff2500",
     "about": "I am a Java Developer"
-   },
-   {
-   "username": "sahdev04",
-  "name": "Sahdev Patel",
-  "github": "sahdev04",
-  "banner_color": "#2BEBF4",
-  "about": "Hello I am Sahdev student co-ordinator NAAC."
   },
   {
-     "username": "avinash03082003",
+    "username": "sahdev04",
+    "name": "Sahdev Patel",
+    "github": "sahdev04",
+    "banner_color": "#2BEBF4",
+    "about": "Hello I am Sahdev student co-ordinator NAAC."
+  },
+  {
+    "username": "avinash03082003",
     "name": "Avinash Agrawal",
     "github": "Avinash0308",
     "banner_color": "#2BEBF4",
@@ -63,7 +63,7 @@
     "about": "Developer 👨🏻‍💻 "
   },
   {
-     "username": "trapti77",
+    "username": "trapti77",
     "name": "trapti patel",
     "github": "trapti77",
     "banner_color": "#ff2500",
@@ -301,61 +301,59 @@
     "about": "I am a software developer and microsoft learn student ambassador"
   },
   {
-        "username": "ashu_rai_06",
-        "name": "Ashutosh Rai",
-        "github": "Ashutosh0602",
-        "banner_color": "#C2442D",
-        "about": "Full Stack Javascript | Python Developer"
-    },
-  {
-      "username": "AnkurGattani",
-      "name": "Ankur Gattani",
-      "github": "AnkurGattani",
-      "banner_color": "#71c4cf",
-      "about": "Java Developer"
+    "username": "ashu_rai_06",
+    "name": "Ashutosh Rai",
+    "github": "Ashutosh0602",
+    "banner_color": "#C2442D",
+    "about": "Full Stack Javascript | Python Developer"
   },
-{
-        "username": "_sudhanshu97",
-        "name": "Sudhanshu Singh",
-        "github": "sudhanshusingh-g",
-        "banner_color": "#ffb000",
-        "about": "Frontend Developer | Open Source Contributor | https://sudhanshusingh-g.github.io./"
-    },
-    {
-      "username": "ArnabGH62449074",
-      "name": "Arnab Ghosh",
-      "github": "ArnabBCA",
-      "banner_color": "#5222c9",
-      "about": "I am a Full Stack (MERN) React.js Web Developer"
-    },
-    {
-        "username": "AkshajAgarwal6",
-        "name": "Akshaj Agarwal",
-        "github": "Akshaj1017",
-        "banner_color": "#0155FE",
-        "about": "I am an AI/ML enthusiast who has contributed to the field of data science and data analytics."
-    },
-    {
-        "username": "khuzhi_sharma",
-        "name": "Khushi Sharma",
-        "github": "khushi2762",
-        "banner_color": "#DEA6E4",
-        "about": "Driven by a desire to create positive change through technology, I am on a mission to become a software engineer."
-    },
-    {
-      "username": "donib_irakihda",
-      "name": "Binod Adhikari",
-      "github": "iDonib",
-      "banner_color": "#d7e5ff",
-      "about": "Node JS Backend Developer | https://binodadk.com.np"
-    },
-     {
-        "username": "Devanshu_Koli",
-        "name": "Devanshu Koli",
-        "github": "Devanshukoli",
-        "banner_color": "#3b41ff",
-        "about": "I am Back-End Engineer and Also a Open-Source contributor. "
-    },
-  
-
+  {
+    "username": "AnkurGattani",
+    "name": "Ankur Gattani",
+    "github": "AnkurGattani",
+    "banner_color": "#71c4cf",
+    "about": "Java Developer"
+  },
+  {
+    "username": "_sudhanshu97",
+    "name": "Sudhanshu Singh",
+    "github": "sudhanshusingh-g",
+    "banner_color": "#ffb000",
+    "about": "Frontend Developer | Open Source Contributor | https://sudhanshusingh-g.github.io./"
+  },
+  {
+    "username": "ArnabGH62449074",
+    "name": "Arnab Ghosh",
+    "github": "ArnabBCA",
+    "banner_color": "#5222c9",
+    "about": "I am a Full Stack (MERN) React.js Web Developer"
+  },
+  {
+    "username": "AkshajAgarwal6",
+    "name": "Akshaj Agarwal",
+    "github": "Akshaj1017",
+    "banner_color": "#0155FE",
+    "about": "I am an AI/ML enthusiast who has contributed to the field of data science and data analytics."
+  },
+  {
+    "username": "khuzhi_sharma",
+    "name": "Khushi Sharma",
+    "github": "khushi2762",
+    "banner_color": "#DEA6E4",
+    "about": "Driven by a desire to create positive change through technology, I am on a mission to become a software engineer."
+  },
+  {
+    "username": "donib_irakihda",
+    "name": "Binod Adhikari",
+    "github": "iDonib",
+    "banner_color": "#d7e5ff",
+    "about": "Node JS Backend Developer | https://binodadk.com.np"
+  },
+  {
+    "username": "Devanshu_Koli",
+    "name": "Devanshu Koli",
+    "github": "Devanshukoli",
+    "banner_color": "#3b41ff",
+    "about": "I am Back-End Engineer and Also a Open-Source contributor. "
+  }
 ]
