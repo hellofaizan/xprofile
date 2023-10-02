@@ -1,4 +1,11 @@
-[ {
+[  {
+    "username": "shafi_mohammad_",
+    "name": "Shafi Mohammad",
+    "github": "shafimohammad09",
+    "banner_color": "#ff2500",
+    "about": "I'm a MERN Full Stack Web Developer -->https://www.linkedin.com/in/shafi-mohammad9/"
+  },
+    {
     "username": "aatifcs13",
     "name": "Aatif Arsalan",
     "github": "aatifcs13",
