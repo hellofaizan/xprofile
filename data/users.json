@@ -341,5 +341,13 @@
         "github": "khushi2762",
         "banner_color": "#DEA6E4",
         "about": "Driven by a desire to create positive change through technology, I am on a mission to become a software engineer."
-    }
+    },
+    {
+      "username": "donib_irakihda",
+      "name": "Binod Adhikari",
+      "github": "iDonib",
+      "banner_color": "#d7e5ff",
+      "about": "Node JS Backend Developer | https://binodadk.com.np"
+  }
+
 ]
