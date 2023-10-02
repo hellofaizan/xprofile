@@ -334,5 +334,12 @@
         "github": "Akshaj1017",
         "banner_color": "#0155FE",
         "about": "I am an AI/ML enthusiast who has contributed to the field of data science and data analytics."
-    }
+    },
+    {
+      "username": "donib_irakihda",
+      "name": "Binod Adhikari",
+      "github": "iDonib",
+      "banner_color": "#d7e5ff",
+      "about": "Node JS Developer | https://binodadk.com.np"
+  }
 ]
