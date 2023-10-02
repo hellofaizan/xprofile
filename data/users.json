@@ -327,5 +327,12 @@
       "github": "ArnabBCA",
       "banner_color": "#5222c9",
       "about": "I am a Full Stack (MERN) React.js Web Developer"
+    },
+    {
+        "username": "AkshajAgarwal6",
+        "name": "Akshaj Agarwal",
+        "github": "Akshaj1017",
+        "banner_color": "#0155FE",
+        "about": "I am an AI/ML enthusiast who has contributed to the field of data science and data analytics."
     }
 ]
