@@ -59,7 +59,7 @@ const Card = (props) => {
 						</div>
 
 						{aboutLink ? (
-							<p className="mx-4 md:mx-5 text-base overflow-hidden text-ellipsis min-h-[48px] line-clamp-none md:line-clamp-2 md:active:line-clamp-3 cursor-pointer">
+							<p className="mx-4 md:mx-5 text-base overflow-hidden text-ellipsis min-h-[48px] line-clamp-none md:line-clamp-2 md:active:line-clamp-3">
 								{aboutWithoutLink}{" "}
 								<Link
 									href={aboutLinkMain}
@@ -71,7 +71,7 @@ const Card = (props) => {
 								</Link>
 							</p>
 						) : (
-							<div className="mx-4 md:mx-5 text-base overflow-hidden min-h-[48px] text-ellipsis line-clamp-none md:line-clamp-2 md:active:line-clamp-3 cursor-pointer">
+							<div className="mx-4 md:mx-5 text-base overflow-hidden min-h-[48px] text-ellipsis line-clamp-none md:line-clamp-2 md:active:line-clamp-3 ">
 								{about}
 							</div>
 						)}
